@@ -1,0 +1,28 @@
+set nocompatible
+
+call plug#begin('~/.vim/plugged')
+Plug 'NLKNguyen/papercolor-theme'
+call plug#end()
+
+set t_Co=256
+"set background=light
+set background=dark
+colorscheme PaperColor
+
+set number
+set laststatus=2
+
+set hlsearch
+set ignorecase
+set smartcase
+set incsearch
+
+set autoindent
+set copyindent
+
+set noswapfile
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set noshowmode
+set noerrorbells
