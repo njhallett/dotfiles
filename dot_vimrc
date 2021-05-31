@@ -5,8 +5,7 @@ Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 set t_Co=256
-"set background=light
-set background=dark
+set background=light
 colorscheme PaperColor
 
 set number
