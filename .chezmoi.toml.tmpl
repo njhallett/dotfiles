@@ -1,7 +1,8 @@
 {{ $email := promptString "email" -}}
 
 [data]
-    email = {{ $email }}
+    name = "Niall Hallett"
+    email = {{ $email | quote }}
 
 [diff]
     pager = "less -R"
