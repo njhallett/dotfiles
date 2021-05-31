@@ -1,0 +1,445 @@
+host casetracker
+    hostname ec2-54-166-167-240.compute-1.amazonaws.com
+    user ec2-user
+host assistconnect
+    user centos
+    hostname assistconnect.com
+host legion
+    hostname legion.autologic.com
+    user root
+host gw01
+    hostname gw01.autologic.com
+    user admin
+host gw02
+    hostname gw02.autologic.com
+    user admin
+host gw03
+    hostname gw03.autologic.com
+    user admin
+host gw04
+    hostname gw04.autologic.com
+    user admin
+host gw05
+    hostname gw05.autologic.com
+    user admin
+host gw09
+    hostname gw09.autologic.com
+    user admin
+host gw10
+    hostname gw10.autologic.com
+    user admin
+host gw11
+    hostname gw11.autologic.com
+    user admin
+host gw12
+    hostname gw12.autologic.com
+    user admin
+host sw01
+    hostname sw01.autologic.com
+    user manager
+host sw02
+    hostname sw02.autologic.com
+    user manager
+host hermes
+    hostname hermes.autologicus
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host zeus
+    hostname zeus.autologicus
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host gw
+    hostname gw.njhallett.net
+    user admin
+host omv
+    hostname omv.malaz.lan
+    user root
+host pi
+    hostname pi01.malaz.lan
+    user pi
+host pve
+    hostname pve.malaz.lan
+    user root
+host esxi
+    hostname esxi.malaz.lan
+    user root
+host portal
+    hostname portal.autologic.com
+    user centos
+host portal-stage
+    hostname portal.autologic-test.com
+    user centos
+host portal-dev
+    hostname portal.autologic.tech
+    user centos
+host juniper
+    hostname juniper.lan.autologic.com
+    user admin
+host juniper-ny
+    hostname 10.65.32.1
+    user admin
+host juniper-la
+    hostname 10.67.10.2
+    user admin
+host juniper-au
+    hostname 10.69.32.6
+    user admin
+host docker01
+    hostname docker01.lan.autologic.com
+    user root
+host docker02
+    hostname docker02.lan.autologic.com
+    user root
+host docker03
+    hostname docker03.lan.autologic.com
+    user root
+host docker04
+    hostname docker04.lan.autologic.com
+    user root
+host docker05
+    hostname docker05.lan.autologic.com
+    user root
+host docker06
+    hostname docker06.lan.autologic.com
+    user root
+host docker07
+    hostname docker07.lan.autologic.com
+    user root
+host docker08
+    hostname docker08.lan.autologic.com
+    user root
+host docker09
+    hostname docker09.lan.autologic.com
+    user root
+host docker10
+    hostname docker10.lan.autologic.com
+    user root
+host docker11
+    hostname docker11.lan.autologic.com
+    user root
+host ny-docker01
+    user root
+    hostname 10.65.32.13
+host app02
+    hostname app02.lan.autologic.com
+    user root
+host app03
+    hostname app03.lan.autologic.com
+    user root
+host app04
+    hostname app04.lan.autologic.com
+    user root
+host app05
+    hostname app05.lan.autologic.com
+    user root
+host app09
+    hostname app09.lan.autologic.com
+    user root
+host app10
+    hostname app10.lan.autologic.com
+    user root
+host app11
+    hostname app11.lan.autologic.com
+    user root
+host app13
+    hostname app13.lan.autologic.com
+    user root
+host app15
+    hostname app15.lan.autologic.com
+    user root
+host app17
+    hostname app17.lan.autologic.com
+    user root
+host app20
+    hostname app20.lan.autologic.com
+    user root
+host app21
+    hostname app21.lan.autologic.com
+    user root
+host app22
+    hostname app22.lan.autologic.com
+    user root
+host app23
+    hostname app23.lan.autologic.com
+    user root
+host bu00
+    hostname bu00.lan.autologic.com
+    user root
+host bu01
+    hostname bu01.lan.autologic.com
+    user root
+host crm-test01
+    hostname crm-test01.lan.autologic.com
+    user root
+host dev01
+    hostname dev01.lan.autologic.com
+    user root
+host dev02
+    hostname dev02.lan.autologic.com
+    user root
+host dev03
+    hostname dev03.lan.autologic.com
+    user root
+host data00
+    hostname data00.lan.autologic.com
+    user root
+host data01
+    hostname data01.lan.autologic.com
+    user root
+host data02
+    hostname data02.lan.autologic.com
+    user root
+host data03
+    hostname data03.lan.autologic.com
+    user root
+host data04
+    hostname data04.lan.autologic.com
+    user root
+host data05
+    hostname data05.lan.autologic.com
+    user root
+host log01
+    hostname log01.lan.autologic.com
+    user root
+host nas01
+    hostname nas01.lan.autologic.com
+    user admin
+host nas02
+    hostname nas02.lan.autologic.com
+    user admin
+host nas03
+    hostname nas03.lan.autologic.com
+    user admin
+host dev-nas1
+    hostname dev-nas1.lan.autologic.com
+    user admin
+host dev-nas2
+    hostname dev-nas2.lan.autologic.com
+    user admin
+host crm01
+    hostname crm01.autologic.com
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host crm02
+    hostname crm02.autologic.com
+    user debian
+host crm-stage
+    hostname crm.autologic-test.com
+    user debian
+host app02-ovh
+    hostname app02.autologic.com
+    user root
+host app05-ovh
+    hostname app05.autologic.com
+    user root
+host app08-ovh
+    hostname app08.autologic.com
+    user debian
+host flanker
+    hostname flanker.autologic
+    user root
+host ha01
+    hostname ha01.autologic.com
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host ha02
+    hostname ha02.autologic.com
+    user debian
+host db04
+    hostname db04.autologic.com
+    user admin
+    identityfile /home/niall/.ssh/db04.pem
+host db05
+    hostname db05.autologic.com
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host db06
+    hostname db06.autologic.com
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host db07
+    hostname db07.autologic.com
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host vm00
+    hostname vm00.lan.autologic.com
+    user root
+host vm01
+    hostname vm01.lan.autologic.com
+    user root
+host vm02
+    hostname vm02.lan.autologic.com
+    user root
+host vm03
+    hostname vm03.lan.autologic.com
+    user root
+host vm04
+    hostname vm04.lan.autologic.com
+    user root
+host ny-vm01
+    user root
+    hostname 10.65.8.2
+host au-vm01
+    hostname au-vm01.au.lan.autologic.com
+    user root
+host au-log
+    user root
+    hostname au-log01.au.lan.autologic.com
+host au-relay
+    user root
+    hostname au-relay01.au.lan.autologic.com
+host au-sw
+    user admin
+    hostname au-sw01.au.lan.autologic.com
+host autolink
+    hostname 188.166.156.76
+    user root
+host cms
+    hostname uk.autologic.com
+    user centos
+host cms-stage
+    hostname uk.autologic-test.com
+    user centos
+host crm-interface
+    hostname crm-interface.autologic.com
+    user centos
+host crm-interface-stage
+    hostname crm-interface.autologic-test.com
+    user centos
+host drivepro
+    hostname drivepro-decryption-license-proxy.autologic.com
+    user centos
+host email-service
+    hostname email-service.autologic.com
+    user centos
+host email-service-stage
+    hostname email-service.autologic-test.com
+    user centos
+host kbs
+    hostname kbs.autologic.com
+    user centos
+host kbs-stage
+    hostname kbs.autologic-test.com
+    user centos
+host br01
+    hostname br01.autologic
+    user root
+host vulcan
+    hostname vulcan.autologic
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host corsair
+    hostname corsair.autologic
+    user root
+host lightning
+    hostname lightning.autologic
+    user root
+host sabre
+    hostname sabre.autologic
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host app00
+    hostname app00.autologic
+    user root
+host hurricane
+    hostname hurricane.autologic
+    user root
+host harpoon
+    hostname harpoon.autologic
+    user root
+host hornet
+    hostname hornet.autologic
+    user root
+host vm99
+    hostname vm99.autologic
+    user root
+host spitfire
+    hostname spitfire.autologic
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host sidewinder
+    hostname sidewinder.autologic
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host tomahawk
+    hostname tomahawk.autologic
+    user root
+host condor
+    hostname condor.autologic
+    user root
+host app99
+    hostname app99.autologic
+    user root
+host nt0097uk
+    hostname 10.63.24.38
+    user root
+host nt0099uk
+    hostname 10.63.24.188
+    user root
+host nt0181uk
+    hostname 10.63.24.29
+    user root
+host nt0405uk
+    user niall
+    hostname nt0405uk.lan.autologic.com
+host nt0408uk
+    hostname 10.63.24.170
+    user root
+host bastion
+    user ec2-user
+    hostname ec2-3-9-234-92.eu-west-2.compute.amazonaws.com
+    identityfile /home/niall/.ssh/bastion.pem
+host testcontainer
+    user ec2-user
+    hostname ip-172-32-2-242.eu-west-2.compute.internal
+    proxyjump bastion
+    identityfile /home/niall/.ssh/testcontainerhost.pem
+host dynfi
+    hostname 3.10.162.103
+    user admin
+    identityfile /home/niall/.ssh/dynfi.pem
+host vini
+    hostname vini.cloudapp.net
+host relay
+    hostname relay.autologic.com
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
+host ap01
+    user opusivs_uk
+    hostname 10.63.26.3
+host ap02
+    user opusivs_uk
+    hostname 10.63.26.4
+host ap03
+    user opusivs_uk
+    hostname 10.63.26.5
+host ap04
+    user opusivs_uk
+    hostname 10.63.26.6
+host ap05
+    user opusivs_uk
+    hostname 10.63.26.7
+host ap06
+    user opusivs_uk
+    hostname 10.63.26.8
+host ap07
+    user opusivs_uk
+    hostname 10.63.26.9
+host ap08
+    user opusivs_uk
+    hostname 10.63.26.10
+host ap09
+    user opusivs_uk
+    hostname 10.63.26.11
+host ap10
+    user opusivs_uk
+    hostname 10.63.26.13
+host ap11
+    user opusivs_uk
+    hostname 10.63.26.14
+host ap12
+    user opusivs_uk
+    hostname 10.63.26.15
+host alvin
+    user root
+    hostname alvin.autologic.tech
