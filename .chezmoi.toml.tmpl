@@ -1,0 +1,10 @@
+{{ $email := promptString "email" -}}
+
+[data]
+    email = {{ $email }}
+
+[diff]
+    pager = "less -R"
+
+[merge]
+    command = "meld"
