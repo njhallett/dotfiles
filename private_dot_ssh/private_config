@@ -54,8 +54,11 @@ host gw
 host omv
     hostname omv.malaz.lan
     user root
-host pi
+host pi01
     hostname pi01.malaz.lan
+    user pi
+host pi02
+    hostname pi02.malaz.lan
     user pi
 host pve
     hostname pve.malaz.lan
@@ -229,21 +232,25 @@ host crm-stage
 host app02-ovh
     hostname app02.autologic.com
     user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host app05-ovh
     hostname app05.autologic.com
     user root
 host app08-ovh
     hostname app08.autologic.com
     user debian
-host flanker
-    hostname flanker.autologic
-    user root
+host cc
+    hostname cc.autologic.com
+    user debian
 host ha01
     hostname ha01.autologic.com
     user root
     PubkeyAcceptedKeyTypes +ssh-rsa
 host ha02
     hostname ha02.autologic.com
+    user debian
+host ha03
+    hostname ha03.autologic.com
     user debian
 host db04
     hostname db04.autologic.com
