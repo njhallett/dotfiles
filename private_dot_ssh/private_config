@@ -7,6 +7,7 @@ host assistconnect
 host legion
     hostname legion.autologic.com
     user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host gw01
     hostname gw01.autologic.com
     user admin
@@ -165,6 +166,9 @@ host app22
 host app23
     hostname app23.lan.autologic.com
     user root
+host app25
+    hostname app25.lan.autologic.com
+    user root
 host bu00
     hostname bu00.lan.autologic.com
     user root
@@ -174,6 +178,7 @@ host bu01
 host crm-test01
     hostname crm-test01.lan.autologic.com
     user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host dev01
     hostname dev01.lan.autologic.com
     user root
@@ -301,6 +306,7 @@ host au-sw
 host autolink
     hostname 188.166.156.76
     user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host cms
     hostname uk.autologic.com
     user centos
@@ -354,6 +360,7 @@ host hurricane
 host harpoon
     hostname harpoon.autologic
     user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host hornet
     hostname hornet.autologic
     user root
@@ -371,6 +378,7 @@ host sidewinder
 host tomahawk
     hostname tomahawk.autologic
     user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host condor
     hostname condor.autologic
     user root
