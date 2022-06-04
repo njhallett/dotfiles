@@ -55,6 +55,13 @@ host gw
 host omv
     hostname omv.malaz.lan
     user root
+host esos01
+    hostname esos01.malaz.lan
+    user root
+host humax
+    hostname humax.malaz.lan
+    user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host pi01
     hostname pi01.malaz.lan
     user pi
@@ -79,15 +86,19 @@ host portal-dev
 host juniper
     hostname juniper.lan.autologic.com
     user admin
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host juniper-ny
     hostname 10.65.32.1
     user admin
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host juniper-la
     hostname 10.67.10.2
     user admin
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host juniper-au
     hostname 10.69.32.6
     user admin
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host docker01
     hostname docker01.lan.autologic.com
     user root
@@ -121,9 +132,24 @@ host docker10
 host docker11
     hostname docker11.lan.autologic.com
     user root
+host docker12
+    hostname docker12.lan.autologic.com
+    user root
+host docker13
+    hostname docker13.lan.autologic.com
+    user root
+host docker14
+    hostname docker14.lan.autologic.com
+    user root
+host docker15
+    hostname docker15.lan.autologic.com
+    user root
 host ny-docker01
     user root
     hostname 10.65.32.13
+host ny-docker02
+    user root
+    hostname 10.65.32.15
 host app02
     hostname app02.lan.autologic.com
     user root
@@ -241,21 +267,27 @@ host app02-ovh
 host app05-ovh
     hostname app05.autologic.com
     user root
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host app08-ovh
     hostname app08.autologic.com
     user debian
 host cc
     hostname cc.autologic.com
     user debian
-host ha01
-    hostname ha01.autologic.com
-    user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
 host ha02
     hostname ha02.autologic.com
     user debian
 host ha03
     hostname ha03.autologic.com
+    user debian
+host db01
+    hostname db01.autologic.com
+    user debian
+host db02
+    hostname db02.autologic.com
+    user debian
+host db03
+    hostname db03.autologic.com
     user debian
 host db04
     hostname db04.autologic.com
@@ -273,6 +305,9 @@ host db07
     hostname db07.autologic.com
     user root
     PubkeyAcceptedKeyTypes +ssh-rsa
+host vcentre
+    hostname vcentre.lan.autologic.com
+    user root
 host vm00
     hostname vm00.lan.autologic.com
     user root
@@ -291,6 +326,12 @@ host vm04
 host ny-vm01
     user root
     hostname 10.65.8.2
+Host ny-app01
+    User root
+    Hostname 10.65.32.17
+Host ny-app03
+    User debian
+    Hostname 10.65.32.22
 host au-vm01
     hostname au-vm01.au.lan.autologic.com
     user root
@@ -303,10 +344,18 @@ host au-relay
 host au-sw
     user admin
     hostname au-sw01.au.lan.autologic.com
+host au-4g
+    user root
+    hostname 10.69.33.1
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host autolink
     hostname 188.166.156.76
     user root
     PubkeyAcceptedKeyTypes +ssh-rsa
+host autolink2
+    hostname 13.40.212.143
+    user ec2-user
+    identityfile /home/niall/.ssh/autolinkaws.pem
 host cms
     hostname uk.autologic.com
     user centos
@@ -385,6 +434,12 @@ host condor
 host app99
     hostname app99.autologic
     user root
+host netbotz
+    hostname netbotz.autologic
+    user apc
+    PubkeyAcceptedKeyTypes +ssh-rsa
+    KexAlgorithms +diffie-hellman-group1-sha1
+    Ciphers 3des-cbc
 host nt0097uk
     hostname 10.63.24.38
     user root
@@ -400,6 +455,12 @@ host nt0405uk
 host nt0408uk
     hostname 10.63.24.170
     user root
+Host testclient
+    User niall
+    Hostname 10.63.24.22
+Host pc0666uk
+    User niall.hallett
+    Hostname pc0666uk.lan.autologic.com
 host bastion
     user ec2-user
     hostname ec2-3-9-234-92.eu-west-2.compute.amazonaws.com
@@ -415,6 +476,8 @@ host dynfi
     identityfile /home/niall/.ssh/dynfi.pem
 host vini
     hostname vini.cloudapp.net
+    user niall
+    PubkeyAcceptedKeyTypes +ssh-rsa
 host relay
     hostname relay.autologic.com
     user root
@@ -458,3 +521,24 @@ host ap12
 host alvin
     user root
     hostname alvin.autologic.tech
+
+ === Ann Arbour ===
+Host aa-gw01
+  User root
+  HostName 192.168.0.3
+
+Host aa-vm01
+  User root
+  HostName aa-vm01.opusivs.world
+
+Host aa-vm02
+  User root
+  HostName aa-vm02.opusivs.world
+
+Host aa-vm03
+  User root
+  HostName aa-vm03.opusivs.world
+
+Host aa-app02
+  User root
+  HostName aa-app02.opusivs.world
