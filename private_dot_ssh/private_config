@@ -144,6 +144,9 @@ host docker14
 host docker15
     hostname docker15.lan.autologic.com
     user root
+host docker16
+    hostname docker16.lan.autologic.com
+    user root
 host ny-docker01
     user root
     hostname 10.65.32.13
@@ -542,3 +545,11 @@ Host aa-vm03
 Host aa-app02
   User root
   HostName aa-app02.opusivs.world
+
+Host aa-vcentre
+  User root
+  HostName aa-vcenter01.opusivs.world
+
+Host dx-juniper
+  User admin
+  HostName 10.75.8.1
