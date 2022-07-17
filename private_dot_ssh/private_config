@@ -529,10 +529,12 @@ host alvin
 Host aa-gw01
   User root
   HostName 192.168.0.3
+  identityfile /home/niall/.ssh/autologic
 
-Host aa-vm01
+Host dx-vm01
   User root
-  HostName aa-vm01.opusivs.world
+  HostName 10.75.8.20
+  identityfile /home/niall/.ssh/autologic
 
 Host aa-vm02
   User root
@@ -553,3 +555,14 @@ Host aa-vcentre
 Host dx-juniper
   User admin
   HostName 10.75.8.1
+  identityfile /home/niall/.ssh/autologic
+
+Host dx-app01
+  User root
+  HostName dx-app01.opusivs.world
+  identityfile /home/niall/.ssh/autologic
+
+Host dx-docker01
+  User root
+  HostName dx-docker01.opusivs.world
+  identityfile /home/niall/.ssh/autologic
