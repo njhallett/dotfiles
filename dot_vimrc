@@ -7,6 +7,11 @@ if has("win16") || has("win32")
     set shellcmdflag=-NoLogo\ -NoProfile\ -NonInteractive\ -command
 else
     let plugpath="~/.vim/plugged"
+
+    if has("gui_running")
+        set gfn=CaskaydiaCove\ Nerd\ Font\ Mono\ 9
+    endif             
+
 endif
 
 call plug#begin(plugpath)
@@ -26,15 +31,22 @@ if has("gui_running")
     set guioptions-=R
     set guioptions-=l
     set guioptions-=L
-    set t_co=256
-    set lines=50
+    set lines=60
     set columns=150
 endif             
 
-if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
+set t_co=256
+
+if exists("$TMUX")
+    set notermguicolors
+else
+
+    if exists('+termguicolors')
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+        set termguicolors
+    endif
+
 endif
 
 set background=dark
