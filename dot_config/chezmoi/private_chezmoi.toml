@@ -1,0 +1,8 @@
+[data]
+    name = "Niall Hallett"
+    email = "njhallett@gmail.com"
+
+[diff]
+    command = "difft"
+    args = ["--color", "always", "--missing-as-empty", "--skip-unchanged"]
+    pager = "cat"

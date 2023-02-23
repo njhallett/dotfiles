@@ -61,6 +61,7 @@ host juniper
     hostname juniper.lan.autologic.com
     user admin
     PubkeyAcceptedKeyTypes +ssh-rsa
+    SetEnv TERM=linux
 
 host docker01
     hostname docker01.lan.autologic.com
@@ -129,6 +130,7 @@ host docker16
 host app02
     hostname app02.lan.autologic.com
     user root
+    SetEnv TERM=linux
 
 host app03
     hostname app03.lan.autologic.com
@@ -419,6 +421,7 @@ host app02-ovh
     hostname app02.autologic.com
     user root
     PubkeyAcceptedKeyTypes +ssh-rsa
+    SetEnv TERM=linux
 
 host app05-ovh
     hostname app05.autologic.com
@@ -480,7 +483,7 @@ host autolink
     PubkeyAcceptedKeyTypes +ssh-rsa
 
 host autolink2
-    hostname 13.40.212.143
+    hostname ec2-13-40-212-143.eu-west-2.compute.amazonaws.com
     user ec2-user
     identityfile /home/niall/.ssh/autolinkaws.pem
     SetEnv TERM=linux
@@ -637,6 +640,7 @@ host juniper-ny
     hostname 10.65.32.1
     user admin
     PubkeyAcceptedKeyTypes +ssh-rsa
+    SetEnv TERM=linux
 
 host ny-vm01
     user root
@@ -673,11 +677,6 @@ host gw10
     hostname gw10.autologic.com
     user admin
 
-host juniper-au
-    hostname 10.69.32.6
-    user admin
-    PubkeyAcceptedKeyTypes +ssh-rsa
-
 host au-vm01
     hostname au-vm01.au.lan.autologic.com
     user root
@@ -697,9 +696,19 @@ host au-duo01
     hostname au-duo01.au.lan.autologic.com
     identityfile /home/niall/.ssh/autologic
 
-host au-sw
+host au-juniper
     user admin
     hostname au-sw01.au.lan.autologic.com
+    identityfile /home/niall/.ssh/autologic
+    PubkeyAcceptedKeyTypes +ssh-rsa
+    SetEnv TERM=linux
+
+host au-juniper-root
+    user root
+    hostname au-sw01.au.lan.autologic.com
+    identityfile /home/niall/.ssh/autologic
+    PubkeyAcceptedKeyTypes +ssh-rsa
+    SetEnv TERM=linux
 
 host au-4g
     user root
@@ -716,6 +725,7 @@ host juniper-la
     hostname 10.67.10.2
     user admin
     PubkeyAcceptedKeyTypes +ssh-rsa
+    SetEnv TERM=linux
 
 === Dexter ===
 
@@ -732,75 +742,77 @@ Host gw7502
     SetEnv TERM=linux
 
 Host dx-vmhost01
-  User root
-  HostName 10.75.8.20
-  identityfile /home/niall/.ssh/autologic
+    User root
+    HostName 10.75.8.20
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-vmhost02
-  User root
-  HostName 10.75.8.21
-  identityfile /home/niall/.ssh/autologic
+    User root
+    HostName 10.75.8.21
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-vmhost03
-  User root
-  HostName 10.75.8.22
-  identityfile /home/niall/.ssh/autologic
+    User root
+    HostName 10.75.8.22
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-vcentre
-  User root
-  HostName dx-vcenter01.opusivs.world
+    User root
+    HostName dx-vcenter01.opusivs.world
 
 Host dx-juniper01
-  User admin
-  HostName 10.75.8.1
-  identityfile /home/niall/.ssh/autologic
+    User admin
+    HostName 10.75.8.1
+    identityfile /home/niall/.ssh/autologic
+    SetEnv TERM=linux
 
 Host dx-juniper02
-  User admin
-  HostName 10.75.8.2
-  identityfile /home/niall/.ssh/autologic
+    User admin
+    HostName 10.75.8.2
+    identityfile /home/niall/.ssh/autologic
+    SetEnv TERM=linux
 
 Host dx-app03
-  User debian
-  HostName dx-app03.opusivs.world
-  identityfile /home/niall/.ssh/autologic
+    User debian
+    HostName dx-app03.opusivs.world
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-app04
-  User debian
-  HostName dx-app04.opusivs.world
-  identityfile /home/niall/.ssh/autologic
+    User debian
+    HostName dx-app04.opusivs.world
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-app09
-  User root
-  HostName dx-app09.opusivs.world
-  identityfile /home/niall/.ssh/autologic
+    User root
+    HostName dx-app09.opusivs.world
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-db01
-  User debian
-  HostName dx-db01.opusivs.world
-  identityfile /home/niall/.ssh/autologic
+    User debian
+    HostName dx-db01.opusivs.world
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-zabbix01
-  User itadmin
-  HostName dx-zabbix01.opusivs.world
-  identityfile /home/niall/.ssh/autologic
+    User itadmin
+    HostName dx-zabbix01.opusivs.world
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-docker01
-  User root
-  HostName dx-docker01.opusivs.world
-  identityfile /home/niall/.ssh/autologic
+    User root
+    HostName dx-docker01.opusivs.world
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-docker02
-  User root
-  HostName dx-docker02.opusivs.world
-  identityfile /home/niall/.ssh/autologic
+    User root
+    HostName dx-docker02.opusivs.world
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-docker03
-  User root
-  HostName dx-docker03.opusivs.world
-  identityfile /home/niall/.ssh/autologic
+    User root
+    HostName dx-docker03.opusivs.world
+    identityfile /home/niall/.ssh/autologic
 
 Host dx-docker04
-  User root
-  HostName dx-docker04.opusivs.world
-  identityfile /home/niall/.ssh/autologic
+    User root
+    HostName dx-docker04.opusivs.world
+    identityfile /home/niall/.ssh/autologic
