@@ -16,7 +16,7 @@ host esos01
 host humax
     hostname humax.malaz.lan
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
 
 host pve
     hostname pve.malaz.lan
@@ -60,7 +60,7 @@ host sw02
 host juniper
     hostname juniper.lan.autologic.com
     user admin
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host docker01
@@ -188,22 +188,22 @@ host app23
 host app25
     hostname app25.lan.autologic.com
     user debian
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 host app27
     hostname app27.lan.autologic.com
     user debian
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 host app28
     hostname app28.lan.autologic.com
     user debian
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 host app29
     hostname app29.lan.autologic.com
     user root
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 host bu00
     hostname bu00.lan.autologic.com
@@ -218,7 +218,7 @@ host bu01
 host crm-test01
     hostname crm-test01.lan.autologic.com
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
 
 host dev01
     hostname dev01.lan.autologic.com
@@ -313,14 +313,14 @@ host ox-alienvault
 host ox-jump
     hostname ox-jump.lan.autologic.com
     user alpine
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 === Desktops VLAN ===
 
 Host testclient
     User niall
     Hostname 10.63.24.21
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host pc0666uk
     User niall.hallett
@@ -331,7 +331,7 @@ Host pc0666uk
 host vulcan
     hostname vulcan.autologic
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host corsair
@@ -345,7 +345,8 @@ host lightning
 host sabre
     hostname sabre.autologic
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
+    SetEnv TERM=linux
 
 host app00
     hostname app00.autologic
@@ -354,39 +355,48 @@ host app00
 host hurricane
     hostname hurricane.autologic
     user root
+    SetEnv TERM=linux
 
 host harpoon
     hostname harpoon.autologic
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
+    SetEnv TERM=linux
 
 host hornet
     hostname hornet.autologic
     user root
+    SetEnv TERM=linux
 
 host vm99
     hostname vm99.autologic
     user root
+    SetEnv TERM=linux
 
 host spitfire
     hostname spitfire.autologic
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
-    HostKeyAlgorithms=+ssh-dss
+    PubkeyAcceptedKeyTypes=+ssh-rsa
+    HostKeyAlgorithms=+ssh-rsa
+    SetEnv TERM=linux
 
 host sidewinder
     hostname sidewinder.autologic
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
+    SetEnv TERM=linux
 
 host tomahawk
     hostname tomahawk.autologic
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     HostKeyAlgorithms=+ssh-dss
+    SetEnv TERM=linux
+
 host condor
     hostname condor.autologic
     user root
+    SetEnv TERM=linux
 
 host app99
     hostname app99.autologic
@@ -395,7 +405,7 @@ host app99
 host netbotz
     hostname netbotz.autologic
     user apc
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     KexAlgorithms +diffie-hellman-group1-sha1
     Ciphers 3des-cbc
 
@@ -404,7 +414,7 @@ host netbotz
 host crm01
     hostname crm01.autologic.com
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host crm02
@@ -420,13 +430,13 @@ host crm-stage
 host app02-ovh
     hostname app02.autologic.com
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host app05-ovh
     hostname app05.autologic.com
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
 
 host app08-ovh
     hostname app08.autologic.com
@@ -464,13 +474,13 @@ host db03
 host db04
     hostname db04.autologic.com
     user admin
-    identityfile /home/niall/.ssh/db04.pem
+    identityfile ~/.ssh/db04.pem
     SetEnv TERM=linux
 
 host legion
     hostname legion.autologic.com
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host assistconnect
@@ -480,12 +490,12 @@ host assistconnect
 host autolink
     hostname 188.166.156.76
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
 
 host autolink2
     hostname ec2-13-40-212-143.eu-west-2.compute.amazonaws.com
     user ec2-user
-    identityfile /home/niall/.ssh/autolinkaws.pem
+    identityfile ~/.ssh/autolinkaws.pem
     SetEnv TERM=linux
 
 host casetracker
@@ -546,12 +556,12 @@ host kbs-stage
 host vini
     hostname vini.cloudapp.net
     user niall
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
 
 host relay
     hostname relay.autologic.com
     user root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
 
 host alvin
     user root
@@ -559,21 +569,27 @@ host alvin
 
 host app09-aws
     user ec2-user
-    hostname ec2-34-247-160-60.eu-west-1.compute.amazonaws.com
-    identityfile /home/niall/.ssh/vini.pem
+    hostname app09.autologic.com
+    identityfile ~/.ssh/vini.pem
+    SetEnv TERM=linux
+
+host app10-aws
+    user ec2-user
+    hostname app10.autologic.com
+    identityfile ~/.ssh/vini.pem
     SetEnv TERM=linux
 
 host repo01
     user ec2-user
     hostname repo01.autologic.com
-    identityfile /home/niall/.ssh/repo01.pem
+    identityfile ~/.ssh/repo01.pem
     SetEnv TERM=linux
 
 host repos
     user root
     hostname repo01.autologic.com
     port 2022
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
     SetEnv TERM=linux
 
  === WiFi ===
@@ -639,7 +655,7 @@ host gw12
 host juniper-ny
     hostname 10.65.32.1
     user admin
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host ny-vm01
@@ -665,7 +681,7 @@ host ny-docker02
 host ny-duo01
     user debian
     hostname 10.65.32.23
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 === Melbourne ===
 
@@ -694,26 +710,26 @@ host au-relay01
 host au-duo01
     user debian
     hostname au-duo01.au.lan.autologic.com
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 host au-juniper
     user admin
     hostname au-sw01.au.lan.autologic.com
-    identityfile /home/niall/.ssh/autologic
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    identityfile ~/.ssh/autologic
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host au-juniper-root
     user root
     hostname au-sw01.au.lan.autologic.com
-    identityfile /home/niall/.ssh/autologic
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    identityfile ~/.ssh/autologic
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host au-4g
     user root
     hostname 10.69.33.1
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
 
 === LA ===
 
@@ -724,7 +740,7 @@ host gw05
 host juniper-la
     hostname 10.67.10.2
     user admin
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 === Dexter ===
@@ -732,29 +748,29 @@ host juniper-la
 Host gw7501
     User root
     HostName gw7501.opusivs.net
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
     SetEnv TERM=linux
 
 Host gw7502
     User root
     HostName gw7502.opusivs.net
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
     SetEnv TERM=linux
 
 Host dx-vmhost01
     User root
     HostName 10.75.8.20
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-vmhost02
     User root
     HostName 10.75.8.21
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-vmhost03
     User root
     HostName 10.75.8.22
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-vcentre
     User root
@@ -763,56 +779,56 @@ Host dx-vcentre
 Host dx-juniper01
     User admin
     HostName 10.75.8.1
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
     SetEnv TERM=linux
 
 Host dx-juniper02
     User admin
     HostName 10.75.8.2
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
     SetEnv TERM=linux
 
 Host dx-app03
     User debian
     HostName dx-app03.opusivs.world
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-app04
     User debian
     HostName dx-app04.opusivs.world
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-app09
     User root
     HostName dx-app09.opusivs.world
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-db01
     User debian
     HostName dx-db01.opusivs.world
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-zabbix01
     User itadmin
     HostName dx-zabbix01.opusivs.world
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-docker01
     User root
     HostName dx-docker01.opusivs.world
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-docker02
     User root
     HostName dx-docker02.opusivs.world
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-docker03
     User root
     HostName dx-docker03.opusivs.world
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
 
 Host dx-docker04
     User root
     HostName dx-docker04.opusivs.world
-    identityfile /home/niall/.ssh/autologic
+    identityfile ~/.ssh/autologic
