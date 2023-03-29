@@ -184,6 +184,7 @@ host app22
 host app23
     hostname app23.lan.autologic.com
     user root
+    SetEnv TERM=linux
 
 host app25
     hostname app25.lan.autologic.com
@@ -441,6 +442,7 @@ host app05-ovh
 host app08-ovh
     hostname app08.autologic.com
     user debian
+    SetEnv TERM=linux
 
 host cc
     hostname cc.autologic.com
@@ -562,6 +564,7 @@ host relay
     hostname relay.autologic.com
     user root
     PubkeyAcceptedKeyTypes=+ssh-rsa
+    SetEnv TERM=linux
 
 host alvin
     user root
@@ -591,6 +594,11 @@ host repos
     port 2022
     identityfile ~/.ssh/autologic
     SetEnv TERM=linux
+
+host log01-aws
+    user ec2-user
+    hostname log01.autologic.com
+    identityfile ~/.ssh/log01.pem
 
  === WiFi ===
 
