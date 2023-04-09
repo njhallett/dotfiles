@@ -1,0 +1,15 @@
+export PATH="$PATH:$XDG_DATA_HOME"/cargo/bin
+export PAGER=less
+export EDITOR=vim
+export VIEWER="$HOME"/.local/bin/bat.sh
+export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export HISTFILE="$XDG_STATE_HOME"/bash/history
+export ANSIBLE_HOME="$XDG_CACHE_HOME"/ansible
+export ANSIBLE_CONFIG="$XDG_CONFIG_HOME"/ansible/config
+export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
+export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
+export LESSHISTFILE="$XDG_STATE_HOME"/less/history
+export MYCLI_HISTFILE="$XDG_DATA_HOME"/mycli/history
+export PYLINTHOME="${XDG_CACHE_HOME}"/pylint
