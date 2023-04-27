@@ -1,411 +1,487 @@
 === Home ===
 
 host gw
-    hostname gw.njhallett.net
-    user admin
+    HostName gw.njhallett.net
+    User admin
 
 host omv
-    hostname omv.malaz.lan
-    user niall
+    HostName omv.malaz.lan
+    User niall
 
 host esos01
-    hostname esos01.malaz.lan
-    user root
+    HostName esos01.malaz.lan
+    User root
     SetEnv TERM=linux
 
 host humax
-    hostname humax.malaz.lan
-    user root
+    HostName humax.malaz.lan
+    User root
     PubkeyAcceptedKeyTypes=+ssh-rsa
 
 host pve
-    hostname pve.malaz.lan
-    user root
+    HostName pve.malaz.lan
+    User root
 
 host esxi
-    hostname esxi.malaz.lan
-    user root
+    HostName esxi.malaz.lan
+    User root
 
 host borg
-    hostname borg.malaz.lan
+    HostName borg.malaz.lan
 
 === WAN ===
 
 host gw01
-    hostname gw01.autologic.com
-    user admin
+    HostName gw01.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host gw02
-    hostname gw02.autologic.com
-    user admin
+    HostName gw02.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host gw03
-    hostname gw03.autologic.com
-    user admin
+    HostName gw03.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host gw04
-    hostname gw04.autologic.com
-    user admin
+    HostName gw04.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host sw01
-    hostname sw01.autologic.com
-    user manager
+    HostName sw01.autologic.com
+    User manager
+    IdentityFile ~/.ssh/autologic
 
 host sw02
-    hostname sw02.autologic.com
-    user manager
+    HostName sw02.autologic.com
+    User manager
+    IdentityFile ~/.ssh/autologic
 
 === Server VLAN ===
 
 host juniper
-    hostname juniper.lan.autologic.com
-    user admin
+    HostName juniper.lan.autologic.com
+    User admin
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host docker01
-    hostname docker01.lan.autologic.com
-    user root
+    HostName docker01.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker02
-    hostname docker02.lan.autologic.com
-    user root
+    HostName docker02.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker03
-    hostname docker03.lan.autologic.com
-    user root
+    HostName docker03.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker04
-    hostname docker04.lan.autologic.com
-    user root
+    HostName docker04.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker05
-    hostname docker05.lan.autologic.com
-    user root
+    HostName docker05.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker06
-    hostname docker06.lan.autologic.com
-    user root
+    HostName docker06.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker07
-    hostname docker07.lan.autologic.com
-    user root
+    HostName docker07.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker08
-    hostname docker08.lan.autologic.com
-    user root
+    HostName docker08.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker09
-    hostname docker09.lan.autologic.com
-    user root
+    HostName docker09.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker10
-    hostname docker10.lan.autologic.com
-    user root
+    HostName docker10.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker11
-    hostname docker11.lan.autologic.com
-    user root
+    HostName docker11.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker12
-    hostname docker12.lan.autologic.com
-    user root
+    HostName docker12.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker13
-    hostname docker13.lan.autologic.com
-    user root
+    HostName docker13.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker14
-    hostname docker14.lan.autologic.com
-    user root
+    HostName docker14.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker15
-    hostname docker15.lan.autologic.com
-    user root
+    HostName docker15.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host docker16
-    hostname docker16.lan.autologic.com
-    user root
+    HostName docker16.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app02
-    hostname app02.lan.autologic.com
-    user root
+    HostName app02.lan.autologic.com
+    User root
     SetEnv TERM=linux
+    IdentityFile ~/.ssh/autologic
 
 host app03
-    hostname app03.lan.autologic.com
-    user root
+    HostName app03.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app04
-    hostname app04.lan.autologic.com
-    user root
+    HostName app04.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app05
-    hostname app05.lan.autologic.com
-    user root
+    HostName app05.lan.autologic.com
+    User root
     SetEnv TERM=linux
+    IdentityFile ~/.ssh/autologic
 
 host app09
-    hostname app09.lan.autologic.com
-    user root
+    HostName app09.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app10
-    hostname app10.lan.autologic.com
-    user root
+    HostName app10.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app11
-    hostname app11.lan.autologic.com
-    user root
+    HostName app11.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app13
-    hostname app13.lan.autologic.com
-    user root
+    HostName app13.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app15
-    hostname app15.lan.autologic.com
-    user root
+    HostName app15.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app17
-    hostname app17.lan.autologic.com
-    user root
+    HostName app17.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app20
-    hostname app20.lan.autologic.com
-    user root
+    HostName app20.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app21
-    hostname app21.lan.autologic.com
-    user root
+    HostName app21.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app22
-    hostname app22.lan.autologic.com
-    user root
+    HostName app22.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host app23
-    hostname app23.lan.autologic.com
-    user root
+    HostName app23.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host app25
-    hostname app25.lan.autologic.com
-    user debian
-    identityfile ~/.ssh/autologic
+    HostName app25.lan.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
 
 host app27
-    hostname app27.lan.autologic.com
-    user debian
-    identityfile ~/.ssh/autologic
+    HostName app27.lan.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
 
 host app28
-    hostname app28.lan.autologic.com
-    user debian
-    identityfile ~/.ssh/autologic
+    HostName app28.lan.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
 
 host app29
-    hostname app29.lan.autologic.com
-    user root
-    identityfile ~/.ssh/autologic
+    HostName app29.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host bu00
-    hostname bu00.lan.autologic.com
-    user root
+    HostName bu00.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host bu01
-    hostname bu01.lan.autologic.com
-    user root
+    HostName bu01.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host crm-test01
-    hostname crm-test01.lan.autologic.com
-    user root
+    HostName crm-test01.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
 
 host dev01
-    hostname dev01.lan.autologic.com
-    user root
+    HostName dev01.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host dev02
-    hostname dev02.lan.autologic.com
-    user root
+    HostName dev02.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host dev03
-    hostname dev03.lan.autologic.com
-    user root
+    HostName dev03.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host data00
-    hostname data00.lan.autologic.com
-    user root
+    HostName data00.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host data01
-    hostname data01.lan.autologic.com
-    user root
+    HostName data01.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host data02
-    hostname data02.lan.autologic.com
-    user root
+    HostName data02.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host data03
-    hostname data03.lan.autologic.com
-    user root
+    HostName data03.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host data04
-    hostname data04.lan.autologic.com
-    user root
+    HostName data04.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host data05
-    hostname data05.lan.autologic.com
-    user root
+    HostName data05.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host log01
-    hostname log01.lan.autologic.com
-    user root
+    HostName log01.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host nas01
-    hostname nas01.lan.autologic.com
-    user admin
+    HostName nas01.lan.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host nas02
-    hostname nas02.lan.autologic.com
-    user admin
+    HostName nas02.lan.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host nas03
-    hostname nas03.lan.autologic.com
-    user admin
+    HostName nas03.lan.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host dev-nas1
-    hostname dev-nas1.lan.autologic.com
-    user admin
+    HostName dev-nas1.lan.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host dev-nas2
-    hostname dev-nas2.lan.autologic.com
-    user admin
+    HostName dev-nas2.lan.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host vcentre
-    hostname vcentre.lan.autologic.com
-    user root
+    HostName vcentre.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host vm00
-    hostname vm00.lan.autologic.com
-    user root
+    HostName vm00.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host vm01
-    hostname vm01.lan.autologic.com
-    user root
+    HostName vm01.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host vm02
-    hostname vm02.lan.autologic.com
-    user root
+    HostName vm02.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host vm03
-    hostname vm03.lan.autologic.com
-    user root
+    HostName vm03.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host vm04
-    hostname vm04.lan.autologic.com
-    user root
+    HostName vm04.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host ox-alienvault
-    hostname ox-alienvault-usm.lan.autologic.com
-    user sysadmin
+    HostName ox-alienvault-usm.lan.autologic.com
+    User sysadmin
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host ox-jump
-    hostname ox-jump.lan.autologic.com
-    user alpine
-    identityfile ~/.ssh/autologic
+    HostName ox-jump.lan.autologic.com
+    User alpine
+    IdentityFile ~/.ssh/autologic
 
 === Desktops VLAN ===
 
 Host testclient
+    HostName 10.63.24.21
     User niall
-    Hostname 10.63.24.21
-    identityfile ~/.ssh/autologic
+    IdentityFile ~/.ssh/autologic
 
 Host pc0666uk
+    HostName pc0666uk.lan.autologic.com
     User niall.hallett
-    Hostname pc0666uk.lan.autologic.com
 
 === Old LAN ===
 
 host vulcan
-    hostname vulcan.autologic
-    user root
+    HostName vulcan.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host corsair
-    hostname corsair.autologic
-    user root
+    HostName corsair.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host lightning
-    hostname lightning.autologic
-    user root
+    HostName lightning.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host sabre
-    hostname sabre.autologic
-    user root
+    HostName sabre.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host app00
-    hostname app00.autologic
-    user root
+    HostName app00.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host hurricane
-    hostname hurricane.autologic
-    user root
+    HostName hurricane.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host harpoon
-    hostname harpoon.autologic
-    user root
+    HostName harpoon.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host hornet
-    hostname hornet.autologic
-    user root
+    HostName hornet.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host vm99
-    hostname vm99.autologic
-    user root
+    HostName vm99.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host spitfire
-    hostname spitfire.autologic
-    user root
+    HostName spitfire.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     HostKeyAlgorithms=+ssh-rsa
     SetEnv TERM=linux
 
 host sidewinder
-    hostname sidewinder.autologic
-    user root
+    HostName sidewinder.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host tomahawk
-    hostname tomahawk.autologic
-    user root
+    HostName tomahawk.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
-    HostKeyAlgorithms=+ssh-dss
+    HostKeyAlgorithms=+ssh-rsa
     SetEnv TERM=linux
 
 host condor
-    hostname condor.autologic
-    user root
+    HostName condor.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host app99
-    hostname app99.autologic
-    user root
+    HostName app99.autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host netbotz
-    hostname netbotz.autologic
-    user apc
+    HostName netbotz.autologic
+    User apc
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     KexAlgorithms +diffie-hellman-group1-sha1
     Ciphers 3des-cbc
@@ -413,430 +489,455 @@ host netbotz
 === Cloud ===
 
 host crm01
-    hostname crm01.autologic.com
-    user root
+    HostName crm01.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host crm02
-    hostname crm02.autologic.com
-    user debian
+    HostName crm02.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host crm-stage
-    hostname crm.autologic-test.com
-    user debian
+    HostName crm.autologic-test.com
+    User debian
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host app02-ovh
-    hostname app02.autologic.com
-    user root
+    HostName app02.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host app05-ovh
-    hostname app05.autologic.com
-    user root
+    HostName app05.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
 
 host app08-ovh
-    hostname app08.autologic.com
-    user debian
+    HostName app08.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host cc
-    hostname cc.autologic.com
-    user debian
+    HostName cc.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
 
 host ha02
-    hostname ha02.autologic.com
-    user debian
+    HostName ha02.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host ha03
-    hostname ha03.autologic.com
-    user debian
+    HostName ha03.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host db01
-    hostname db01.autologic.com
-    user debian
+    HostName db01.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host db02
-    hostname db02.autologic.com
-    user debian
+    HostName db02.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host db03
-    hostname db03.autologic.com
-    user debian
+    HostName db03.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host db04
-    hostname db04.autologic.com
-    user admin
-    identityfile ~/.ssh/db04.pem
+    HostName db04.autologic.com
+    User admin
+    IdentityFile ~/.ssh/db04.pem
     SetEnv TERM=linux
 
 host legion
-    hostname legion.autologic.com
-    user root
+    HostName legion.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host assistconnect
-    user centos
-    hostname assistconnect.com
+    HostName assistconnect.com
+    User centos
+    IdentityFile ~/.ssh/autologic
 
 host autolink
-    hostname 188.166.156.76
-    user root
-    PubkeyAcceptedKeyTypes=+ssh-rsa
-
-host autolink2
-    hostname ec2-13-40-212-143.eu-west-2.compute.amazonaws.com
-    user ec2-user
-    identityfile ~/.ssh/autolinkaws.pem
+    HostName ec2-13-40-212-143.eu-west-2.compute.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/autolinkaws.pem
     SetEnv TERM=linux
 
 host casetracker
-    hostname ec2-54-166-167-240.compute-1.amazonaws.com
-    user ec2-user
+    HostName ec2-54-166-167-240.compute-1.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/autologic
 
 host portal
-    hostname portal.autologic.com
-    user centos
+    HostName portal.autologic.com
+    User centos
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host portal-stage
-    hostname portal.autologic-test.com
-    user centos
+    HostName portal.autologic-test.com
+    User centos
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host portal-dev
-    hostname portal.autologic.tech
-    user centos
+    HostName portal.autologic.tech
+    User centos
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host cms
-    hostname uk.autologic.com
-    user centos
+    HostName uk.autologic.com
+    User centos
+    IdentityFile ~/.ssh/autologic
 
 host cms-stage
-    hostname uk.autologic-test.com
-    user centos
+    HostName uk.autologic-test.com
+    User centos
+    IdentityFile ~/.ssh/autologic
 
 host crm-interface
-    hostname crm-interface.autologic.com
-    user centos
+    HostName crm-interface.autologic.com
+    User centos
+    IdentityFile ~/.ssh/autologic
 
 host crm-interface-stage
-    hostname crm-interface.autologic-test.com
-    user centos
+    HostName crm-interface.autologic-test.com
+    User centos
+    IdentityFile ~/.ssh/autologic
 
 host drivepro
-    hostname drivepro-decryption-license-proxy.autologic.com
-    user centos
+    HostName drivepro-decryption-license-proxy.autologic.com
+    User centos
+    IdentityFile ~/.ssh/autologic
 
 host email-service
-    hostname email-service.autologic.com
-    user centos
+    HostName email-service.autologic.com
+    User centos
+    IdentityFile ~/.ssh/autologic
 
 host email-service-stage
-    hostname email-service.autologic-test.com
-    user centos
+    HostName email-service.autologic-test.com
+    User centos
+    IdentityFile ~/.ssh/autologic
 
 host kbs
-    hostname kbs.autologic.com
-    user centos
+    HostName kbs.autologic.com
+    User centos
+    IdentityFile ~/.ssh/autologic
 
 host kbs-stage
-    hostname kbs.autologic-test.com
-    user centos
-
-host vini
-    hostname vini.cloudapp.net
-    user niall
-    PubkeyAcceptedKeyTypes=+ssh-rsa
-
-host relay
-    hostname relay.autologic.com
-    user root
-    PubkeyAcceptedKeyTypes=+ssh-rsa
-    SetEnv TERM=linux
-
-host alvin
-    user root
-    hostname alvin.autologic.tech
+    HostName kbs.autologic-test.com
+    User centos
+    IdentityFile ~/.ssh/autologic
 
 host app09-aws
-    user ec2-user
-    hostname app09.autologic.com
-    identityfile ~/.ssh/vini.pem
+    HostName app09.autologic.com
+    User ec2-user
+    IdentityFile ~/.ssh/vini.pem
     SetEnv TERM=linux
 
 host app10-aws
-    user ec2-user
-    hostname app10.autologic.com
-    identityfile ~/.ssh/vini.pem
+    HostName app10.autologic.com
+    User ec2-user
+    IdentityFile ~/.ssh/vini.pem
     SetEnv TERM=linux
 
 host repo01
-    user ec2-user
-    hostname repo01.autologic.com
-    identityfile ~/.ssh/repo01.pem
+    HostName repo01.autologic.com
+    User ec2-user
+    IdentityFile ~/.ssh/repo01.pem
     SetEnv TERM=linux
 
 host repos
-    user root
-    hostname repo01.autologic.com
+    HostName repo01.autologic.com
+    User root
     port 2022
-    identityfile ~/.ssh/autologic
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host log01-aws
-    user ec2-user
-    hostname log01.autologic.com
-    identityfile ~/.ssh/log01.pem
+    HostName log01.autologic.com
+    User ec2-user
+    IdentityFile ~/.ssh/log01.pem
 
  === WiFi ===
 
 host ap01
-    user opusivs_uk
-    hostname 10.63.26.3
+    HostName 10.63.26.3
+    User opusivs_uk
 
 host ap02
-    user opusivs_uk
-    hostname 10.63.26.4
+    HostName 10.63.26.4
+    User opusivs_uk
 
 host ap03
-    user opusivs_uk
-    hostname 10.63.26.5
+    HostName 10.63.26.5
+    User opusivs_uk
 
 host ap04
-    user opusivs_uk
-    hostname 10.63.26.6
+    HostName 10.63.26.6
+    User opusivs_uk
 
 host ap05
-    user opusivs_uk
-    hostname 10.63.26.7
+    HostName 10.63.26.7
+    User opusivs_uk
 
 host ap06
-    user opusivs_uk
-    hostname 10.63.26.8
+    HostName 10.63.26.8
+    User opusivs_uk
 
 host ap07
-    user opusivs_uk
-    hostname 10.63.26.9
+    HostName 10.63.26.9
+    User opusivs_uk
 
 host ap08
-    user opusivs_uk
-    hostname 10.63.26.10
+    HostName 10.63.26.10
+    User opusivs_uk
 
 host ap09
-    user opusivs_uk
-    hostname 10.63.26.11
+    HostName 10.63.26.11
+    User opusivs_uk
 
 host ap10
-    user opusivs_uk
-    hostname 10.63.26.13
+    HostName 10.63.26.13
+    User opusivs_uk
 
 host ap11
-    user opusivs_uk
-    hostname 10.63.26.14
+    HostName 10.63.26.14
+    User opusivs_uk
 
 host ap12
-    user opusivs_uk
-    hostname 10.63.26.15
+    HostName 10.63.26.15
+    User opusivs_uk
 
 === New York ===
 
 host gw11
-    hostname gw11.autologic.com
-    user admin
+    HostName gw11.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host gw12
-    hostname gw12.autologic.com
-    user admin
+    HostName gw12.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host juniper-ny
-    hostname 10.65.32.1
-    user admin
+    HostName 10.65.32.1
+    User admin
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host ny-vm01
-    user root
-    hostname 10.65.8.2
+    HostName 10.65.8.2
+    User root
+    IdentityFile ~/.ssh/autologic
 
 Host ny-app01
+    HostName 10.65.32.17
     User root
-    Hostname 10.65.32.17
+    IdentityFile ~/.ssh/autologic
 
 Host ny-app03
+    HostName 10.65.32.22
     User debian
-    Hostname 10.65.32.22
+    IdentityFile ~/.ssh/autologic
 
 host ny-docker01
-    user root
-    hostname 10.65.32.13
+    HostName 10.65.32.13
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host ny-docker02
-    user root
-    hostname 10.65.32.15
+    HostName 10.65.32.15
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host ny-duo01
-    user debian
-    hostname 10.65.32.23
-    identityfile ~/.ssh/autologic
+    HostName 10.65.32.23
+    User debian
+    IdentityFile ~/.ssh/autologic
 
 === Melbourne ===
 
 host gw09
-    hostname gw09.autologic.com
-    user admin
+    HostName gw09.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host gw10
-    hostname gw10.autologic.com
-    user admin
+    HostName gw10.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host au-vm01
-    hostname au-vm01.au.lan.autologic.com
-    user root
+    HostName au-vm01.au.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
 
 host au-log01
-    user root
-    hostname au-log01.au.lan.autologic.com
+    HostName au-log01.au.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host au-relay01
-    user root
-    hostname au-relay01.au.lan.autologic.com
+    HostName au-relay01.au.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 host au-duo01
-    user debian
-    hostname au-duo01.au.lan.autologic.com
-    identityfile ~/.ssh/autologic
+    HostName au-duo01.au.lan.autologic.com
+    User debian
+    IdentityFile ~/.ssh/autologic
+    IdentityFile ~/.ssh/autologic
 
 host au-juniper
-    user admin
-    hostname au-sw01.au.lan.autologic.com
-    identityfile ~/.ssh/autologic
+    HostName au-sw01.au.lan.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host au-juniper-root
-    user root
-    hostname au-sw01.au.lan.autologic.com
-    identityfile ~/.ssh/autologic
+    HostName au-sw01.au.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 host au-4g
-    user root
-    hostname 10.69.33.1
+    HostName 10.69.33.1
+    User root
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
 
 === LA ===
 
 host gw05
-    hostname gw05.autologic.com
-    user admin
+    HostName gw05.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
 
 host juniper-la
-    hostname 10.67.10.2
-    user admin
+    HostName 10.67.10.2
+    User admin
+    IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=linux
 
 === Dexter ===
 
 Host gw7501
-    User root
     HostName gw7501.opusivs.net
-    identityfile ~/.ssh/autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 Host gw7502
-    User root
     HostName gw7502.opusivs.net
-    identityfile ~/.ssh/autologic
+    User root
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 Host dx-vmhost01
-    User root
     HostName 10.75.8.20
-    identityfile ~/.ssh/autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 Host dx-vmhost02
-    User root
     HostName 10.75.8.21
-    identityfile ~/.ssh/autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 Host dx-vmhost03
-    User root
     HostName 10.75.8.22
-    identityfile ~/.ssh/autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 Host dx-vcentre
-    User root
     HostName dx-vcenter01.opusivs.world
+    User root
+    IdentityFile ~/.ssh/autologic
 
 Host dx-juniper01
-    User admin
     HostName 10.75.8.1
-    identityfile ~/.ssh/autologic
+    User admin
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 Host dx-juniper02
-    User admin
     HostName 10.75.8.2
-    identityfile ~/.ssh/autologic
+    User admin
+    IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
 Host dx-app03
-    User debian
     HostName dx-app03.opusivs.world
-    identityfile ~/.ssh/autologic
+    User debian
+    IdentityFile ~/.ssh/autologic
 
 Host dx-app04
-    User debian
     HostName dx-app04.opusivs.world
-    identityfile ~/.ssh/autologic
+    User debian
+    IdentityFile ~/.ssh/autologic
 
 Host dx-app09
-    User root
     HostName dx-app09.opusivs.world
-    identityfile ~/.ssh/autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 Host dx-db01
-    User debian
     HostName dx-db01.opusivs.world
-    identityfile ~/.ssh/autologic
+    User debian
+    IdentityFile ~/.ssh/autologic
 
 Host dx-zabbix01
-    User itadmin
     HostName dx-zabbix01.opusivs.world
-    identityfile ~/.ssh/autologic
+    User itadmin
+    IdentityFile ~/.ssh/autologic
 
 Host dx-docker01
-    User root
     HostName dx-docker01.opusivs.world
-    identityfile ~/.ssh/autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 Host dx-docker02
-    User root
     HostName dx-docker02.opusivs.world
-    identityfile ~/.ssh/autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 Host dx-docker03
-    User root
     HostName dx-docker03.opusivs.world
-    identityfile ~/.ssh/autologic
+    User root
+    IdentityFile ~/.ssh/autologic
 
 Host dx-docker04
-    User root
     HostName dx-docker04.opusivs.world
-    identityfile ~/.ssh/autologic
+    User root
+    IdentityFile ~/.ssh/autologic
