@@ -1,0 +1,27 @@
+# vim: filetype=muttrc
+unmailboxes *
+
+# in/out mail servers
+set realname = "{{ .name }}"
+set imap_pass = "{{ (bitwarden "item" "mailu niall").login.password }}"
+set smtp_url = "{{ (bitwardenFields "item" "mailu niall").smtp.value }}"
+set smtp_pass = "{{ (bitwarden "item" "mailu niall").login.password }}"
+set folder = "{{ (bitwardenFields "item" "mailu niall").imap.value }}"
+set spoolfile = "+INBOX"
+
+set from = "{{ (bitwarden "item" "mailu niall").login.username }}"
+set envelope_from
+set use_from = "yes"
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+set mail_check = 6
+
+# Allow Mutt to open a new IMAP connection automatically.
+unset imap_passive
+
+# Keep the IMAP connection alive by polling intermittently (time in seconds).
+set imap_keepalive = 300
+
+## Hook -- IMPORTANT!
+account-hook $folder "set imap_pass={{ (bitwarden "item" "mailu niall").login.password }}"

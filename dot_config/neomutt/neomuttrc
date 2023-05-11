@@ -1,0 +1,17 @@
+# vim: filetype=muttrc
+
+#source ~/.config/neomutt/settings
+source ~/.config/neomutt/gruvbox/colors-gruvbox-shuber.muttrc
+source ~/.config/neomutt/gruvbox/colors-gruvbox-shuber-extended.muttrc
+#source ~/.config/neomutt/mappings
+
+# Accounts
+
+#source ~/.config/neomutt/accounts/gmail
+#folder-hook $folder 'source ~/.config/neomutt/accounts/gmail'
+
+#source ~/.config/neomutt/accounts/school
+#folder-hook $folder 'source ~/.config/neomutt/accounts/school'
+
+source ~/.config/neomutt/accounts/njhallett.net
+folder-hook $folder 'source ~/.config/neomutt/accounts/njhallett.net'
