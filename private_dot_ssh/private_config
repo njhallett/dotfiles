@@ -757,6 +757,11 @@ host ny-vm01
     User root
     IdentityFile ~/.ssh/autologic
 
+host ny-nas01
+    HostName ny-nas01.opusivs.world
+    User admin
+    IdentityFile ~/.ssh/autologic
+
 Host ny-app01
     HostName 10.65.32.17
     User root
@@ -797,6 +802,11 @@ host gw10
 host au-vm01
     HostName au-vm01.au.lan.autologic.com
     User root
+    IdentityFile ~/.ssh/autologic
+
+host au-nas01
+    HostName au-nas01.au.lan.autologic.com
+    User admin
     IdentityFile ~/.ssh/autologic
 
 host au-log01
