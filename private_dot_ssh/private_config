@@ -890,6 +890,24 @@ Host dx-vmhost03
     User root
     IdentityFile ~/.ssh/autologic
 
+Host dx-nas01
+    HostName dx-nas01.opusivs.world
+    User admin
+    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
+
+Host dx-nas02
+    HostName dx-nas02.opusivs.world
+    User itteam
+    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
+
+Host dx-nas03
+    HostName dx-nas03.opusivs.world
+    User admin
+    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
+
 Host dx-vcentre
     HostName dx-vcenter01.opusivs.world
     User root
