@@ -1,3 +1,4 @@
+alias vi=vim
 alias dm='dmesg -HTwx'
 alias ls='lsd'
 alias ll='lsd -l'
