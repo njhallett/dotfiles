@@ -20,6 +20,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'sainnhe/gruvbox-material'
 Plug 'NoahTheDuke/vim-just'
+Plug 'pearofducks/ansible-vim'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 if has("gui_running")
@@ -68,6 +70,9 @@ endtry
 
 let g:airline_theme='base16_gruvbox_dark_hard'
 let g:airline_powerline_fonts = 1
+
+let g:ale_linters = { "python": ["ruff"] }
+let g:ale_fixers = { "python": ["ruff"] }
 
 set encoding=utf8
 set ffs=unix,dos,mac
