@@ -149,6 +149,16 @@ host docker16
     User root
     IdentityFile ~/.ssh/autologic
 
+host docker17
+    HostName docker17.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
+
+host docker18
+    HostName docker18.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
+
 host app02
     HostName app02.lan.autologic.com
     User root
@@ -262,12 +272,12 @@ host crm-test01
 
 host dev01
     HostName dev01.lan.autologic.com
-    User root
+    User debian
     IdentityFile ~/.ssh/autologic
 
 host dev02
     HostName dev02.lan.autologic.com
-    User root
+    User niall
     IdentityFile ~/.ssh/autologic
 
 host dev03
@@ -303,6 +313,11 @@ host data04
 host data05
     HostName data05.lan.autologic.com
     User root
+    IdentityFile ~/.ssh/autologic
+
+host data06
+    HostName data06.lan.autologic.com
+    User debian
     IdentityFile ~/.ssh/autologic
 
 host log01
@@ -378,11 +393,6 @@ host ox-jump
     IdentityFile ~/.ssh/autologic
 
 === Desktops VLAN ===
-
-Host testclient
-    HostName 10.63.24.21
-    User niall
-    IdentityFile ~/.ssh/autologic
 
 Host pc0666uk
     HostName pc0666uk.lan.autologic.com
@@ -898,7 +908,7 @@ Host dx-nas01
 
 Host dx-nas02
     HostName dx-nas02.opusivs.world
-    User itteam
+    User admin
     IdentityFile ~/.ssh/autologic
     SetEnv TERM=linux
 
