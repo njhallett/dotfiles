@@ -398,6 +398,11 @@ Host pc0666uk
     HostName pc0666uk.lan.autologic.com
     User niall.hallett
 
+Host pc0239uk
+    HostName 10.63.24.38
+    User niall
+    IdentityFile ~/.ssh/autologic
+
 === Old LAN ===
 
 host vulcan
@@ -693,6 +698,22 @@ host log01-aws
     User ec2-user
     IdentityFile ~/.ssh/log01.pem
 
+host bastion01-aws
+    HostName ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/bastion-AL-legacy.pem
+
+host docker01-al-legacy
+    HostName ip-172-32-2-163.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker01-AL-legacy.pem
+    ProxyJump bastion01-aws
+
+host docker01-al-legacy-deploy
+    HostName ip-172-32-2-163.eu-west-2.compute.internal
+    User deploy
+    ProxyJump ox-jump,deploy@ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
+
  === WiFi ===
 
 host ap01
@@ -977,5 +998,10 @@ Host dx-docker03
 
 Host dx-docker04
     HostName dx-docker04.opusivs.world
+    User root
+    IdentityFile ~/.ssh/autologic
+
+Host dx-docker05
+    HostName dx-docker05.opusivs.world
     User root
     IdentityFile ~/.ssh/autologic
