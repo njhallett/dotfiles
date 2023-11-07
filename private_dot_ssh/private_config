@@ -285,6 +285,11 @@ host dev03
     User root
     IdentityFile ~/.ssh/autologic
 
+host dev04
+    HostName dev04.lan.autologic.com
+    User niall
+    IdentityFile ~/.ssh/autologic
+
 host data00
     HostName data00.lan.autologic.com
     User root
@@ -711,6 +716,39 @@ host docker01-al-legacy
 
 host docker01-al-legacy-deploy
     HostName ip-172-32-2-163.eu-west-2.compute.internal
+    User deploy
+    ProxyJump ox-jump,deploy@ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
+
+host docker02-al-legacy
+    HostName ip-172-32-3-105.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker02-AL-legacy.pem
+    ProxyJump bastion01-aws
+
+host docker02-al-legacy-deploy
+    HostName ip-172-32-3-105.eu-west-2.compute.internal
+    User deploy
+    ProxyJump ox-jump,deploy@ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
+
+host docker03-al-legacy
+    HostName ip-172-32-3-198.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker03-AL-legacy.pem
+    ProxyJump bastion01-aws
+
+host docker03-al-legacy-deploy
+    HostName ip-172-32-3-198.eu-west-2.compute.internal
+    User deploy
+    ProxyJump ox-jump,deploy@ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
+
+host docker04-al-legacy
+    HostName ip-172-32-2-210.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker04-AL-legacy.pem
+    ProxyJump bastion01-aws
+
+host docker04-al-legacy-deploy
+    HostName ip-172-32-2-210.eu-west-2.compute.internal
     User deploy
     ProxyJump ox-jump,deploy@ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
 
