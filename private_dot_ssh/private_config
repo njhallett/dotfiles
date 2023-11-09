@@ -703,54 +703,63 @@ host log01-aws
     User ec2-user
     IdentityFile ~/.ssh/log01.pem
 
-host bastion01-aws
+host bastion01
     HostName ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
     User ec2-user
     IdentityFile ~/.ssh/bastion-AL-legacy.pem
+
+host bastion01-deploy
+    HostName ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
+    User deploy
+    IdentityFile ~/.ssh/autologic
 
 host docker01-al-legacy
     HostName ip-172-32-2-163.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker01-AL-legacy.pem
-    ProxyJump bastion01-aws
+    ProxyJump bastion01
 
 host docker01-al-legacy-deploy
     HostName ip-172-32-2-163.eu-west-2.compute.internal
     User deploy
-    ProxyJump ox-jump,deploy@ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
+    IdentityFile ~/.ssh/autologic
+    ProxyJump ox-jump,bastion01-deploy
 
 host docker02-al-legacy
     HostName ip-172-32-3-105.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker02-AL-legacy.pem
-    ProxyJump bastion01-aws
+    ProxyJump bastion01
 
 host docker02-al-legacy-deploy
     HostName ip-172-32-3-105.eu-west-2.compute.internal
     User deploy
-    ProxyJump ox-jump,deploy@ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
+    IdentityFile ~/.ssh/autologic
+    ProxyJump ox-jump,bastion01-deploy
 
 host docker03-al-legacy
     HostName ip-172-32-3-198.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker03-AL-legacy.pem
-    ProxyJump bastion01-aws
+    ProxyJump bastion01
 
 host docker03-al-legacy-deploy
     HostName ip-172-32-3-198.eu-west-2.compute.internal
     User deploy
-    ProxyJump ox-jump,deploy@ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
+    IdentityFile ~/.ssh/autologic
+    ProxyJump ox-jump,bastion01-deploy
 
 host docker04-al-legacy
     HostName ip-172-32-2-210.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker04-AL-legacy.pem
-    ProxyJump bastion01-aws
+    ProxyJump bastion01
 
 host docker04-al-legacy-deploy
     HostName ip-172-32-2-210.eu-west-2.compute.internal
     User deploy
-    ProxyJump ox-jump,deploy@ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
+    IdentityFile ~/.ssh/autologic
+    ProxyJump ox-jump,bastion01-deploy
 
  === WiFi ===
 
