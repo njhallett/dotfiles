@@ -761,6 +761,42 @@ host docker04-al-legacy-deploy
     IdentityFile ~/.ssh/autologic
     ProxyJump ox-jump,bastion01-deploy
 
+host docker05-al-legacy
+    HostName ip-172-32-3-204.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker05-AL-legacy.pem
+    ProxyJump bastion01
+
+host docker05-al-legacy-deploy
+    HostName ip-172-32-3-204.eu-west-2.compute.internal
+    User deploy
+    IdentityFile ~/.ssh/autologic
+    ProxyJump ox-jump,bastion01-deploy
+
+host docker06-al-legacy
+    HostName ip-172-32-3-40.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker06-AL-legacy.pem
+    ProxyJump bastion01
+
+host docker06-al-legacy-deploy
+    HostName ip-172-32-3-40.eu-west-2.compute.internal
+    User deploy
+    IdentityFile ~/.ssh/autologic
+    ProxyJump ox-jump,bastion01-deploy
+
+host docker07-al-legacy
+    HostName ip-172-32-2-224.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker07-AL-legacy.pem
+    ProxyJump bastion01
+
+host docker07-al-legacy-deploy
+    HostName ip-172-32-2-224.eu-west-2.compute.internal
+    User deploy
+    IdentityFile ~/.ssh/autologic
+    ProxyJump ox-jump,bastion01-deploy
+
  === WiFi ===
 
 host ap01
