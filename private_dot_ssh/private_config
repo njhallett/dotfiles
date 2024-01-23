@@ -35,21 +35,25 @@ host gw01
     HostName gw01.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
 
 host gw02
     HostName gw02.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
 
 host gw03
     HostName gw03.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
 
 host gw04
     HostName gw04.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
 
 host sw01
     HostName sw01.autologic.com
@@ -853,11 +857,13 @@ host gw11
     HostName gw11.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
 
 host gw12
     HostName gw12.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
 
 host juniper-ny
     HostName 10.65.32.1
@@ -907,11 +913,13 @@ host gw09
     HostName gw09.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
 
 host gw10
     HostName gw10.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
 
 host au-vm01
     HostName au-vm01.au.lan.autologic.com
@@ -967,6 +975,7 @@ host gw05
     HostName gw05.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=linux
 
 host juniper-la
     HostName 10.67.10.2
