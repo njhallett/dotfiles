@@ -801,6 +801,11 @@ host docker07-al-legacy-deploy
     IdentityFile ~/.ssh/autologic
     ProxyJump ox-jump,bastion01-deploy
 
+host ip-172-32-*-*.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/autologic
+    ProxyJump bastion01
+
  === WiFi ===
 
 host ap01
