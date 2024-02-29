@@ -801,12 +801,23 @@ host docker07-al-legacy-deploy
     IdentityFile ~/.ssh/autologic
     ProxyJump ox-jump,bastion01-deploy
 
+=== Cloud automation defaults ===
+
 host ip-172-32-*-*.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/autologic
     ProxyJump bastion01
 
- === WiFi ===
+# db04
+host ec2-3-11-206-111.eu-west-2.compute.amazonaws.com
+    User admin
+    IdentityFile ~/.ssh/autologic
+
+host ec2-*.*.compute.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/autologic
+
+=== WiFi ===
 
 host ap01
     HostName 10.63.26.3
@@ -1070,6 +1081,11 @@ Host dx-app09
 
 Host dx-db01
     HostName dx-db01.opusivs.world
+    User debian
+    IdentityFile ~/.ssh/autologic
+
+Host dx-db02
+    HostName dx-db02.opusivs.world
     User debian
     IdentityFile ~/.ssh/autologic
 
