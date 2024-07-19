@@ -307,7 +307,7 @@ host ox-app01
 
 host ox-app03
     HostName ox-app03.lan.autologic.com
-    User alpine
+    User root
     IdentityFile ~/.ssh/autologic
 
 host ox-app05
@@ -319,6 +319,12 @@ host ox-app22
     HostName ox-app22.lan.autologic.com
     User debian
     IdentityFile ~/.ssh/autologic
+
+host ox-app23
+    HostName ox-app23.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 host ox-dev02
     HostName ox-dev02.lan.autologic.com
@@ -479,6 +485,21 @@ host ox-code.lan.autologic.com
 host ox-alienvault
     HostName ox-alienvault-usm.lan.autologic.com
     User sysadmin
+
+host pi0660uk
+    HostName 10.77.28.51
+    User alpine
+    IdentityFile ~/.ssh/autologic
+
+host pi0662uk
+    HostName 10.77.28.43
+    User alpine
+    IdentityFile ~/.ssh/autologic
+
+host pi0663uk
+    HostName 10.77.28.50
+    User alpine
+    IdentityFile ~/.ssh/autologic
 
 Host spitfire
     Hostname spitfire.lan.autologic.com
@@ -907,6 +928,7 @@ host au-nas01
     HostName au-nas01.au.lan.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
 host au-log01
@@ -928,6 +950,13 @@ host au-duo01
     User debian
     IdentityFile ~/.ssh/autologic
     IdentityFile ~/.ssh/autologic
+    ProxyJump ox-jump
+
+host au-app01
+    HostName au-app01.au.lan.autologic.com
+    User root
+    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
 host au-docker01
@@ -1055,6 +1084,18 @@ Host dx-app16
     HostName dx-app16.opusivs.world
     User debian
     IdentityFile ~/.ssh/autologic
+
+host dx-app15
+    HostName dx-app15.opusivs.world
+    User root
+    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
+
+host dx-app18
+    HostName dx-app18.opusivs.world
+    User root
+    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 Host dx-db01
     HostName dx-db01.opusivs.world
