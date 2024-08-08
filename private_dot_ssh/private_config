@@ -401,26 +401,37 @@ host nas01
     HostName nas01.lan.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 host nas02
     HostName nas02.lan.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 host nas03
     HostName nas03.lan.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
+
+host ox-nas05
+    HostName ox-nas05.lan.autologic.com
+    User admin
+    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 host dev-nas1
     HostName dev-nas1.lan.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 host dev-nas2
     HostName dev-nas2.lan.autologic.com
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 host ox-san02
     HostName ox-san02.lan.autologic.com
@@ -614,11 +625,6 @@ host legion
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=xterm-256color
 
-host assistconnect
-    HostName assistconnect.com
-    User centos
-    IdentityFile ~/.ssh/autologic
-
 host autolink
     HostName autolink.autologic.com
     User ec2-user
@@ -626,9 +632,10 @@ host autolink
     SetEnv TERM=xterm-256color
 
 host casetracker
-    HostName ec2-54-166-167-240.compute-1.amazonaws.com
+    HostName ec2-34-202-43-220.compute-1.amazonaws.com
     User ec2-user
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 host portal
     HostName portal.autologic.com
@@ -878,6 +885,7 @@ host ny-nas01
     HostName ny-nas01.opusivs.world
     User admin
     IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 Host ny-app01
     HostName 10.65.32.17
@@ -995,6 +1003,7 @@ host juniper-la
     IdentityFile ~/.ssh/autologic
     PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=xterm-256color
+    ProxyJump ox-jump
 
 === Dexter ===
 
