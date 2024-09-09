@@ -2,7 +2,7 @@ set nocompatible
 
 if has("win16") || has("win32")
     let plugpath="~/vimfiles/plugged"
-    set gfn=CaskaydiaCove\ Nerd\ Font:h9
+    set gfn=Cascadia\ Code\ NF:h9
     set shell=pwsh.exe
     set shellcmdflag=-NoLogo\ -NoProfile\ -NonInteractive\ -command
 else
@@ -22,6 +22,7 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'NoahTheDuke/vim-just'
 Plug 'pearofducks/ansible-vim'
 Plug 'dense-analysis/ale'
+Plug 'mcchrish/nnn.vim'
 call plug#end()
 
 if has("gui_running")
