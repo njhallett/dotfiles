@@ -6,6 +6,7 @@ if has("win16") || has("win32")
     set shell=pwsh.exe
     set shellcmdflag=-NoLogo\ -NoProfile\ -NonInteractive\ -command
 else
+    set viminfo+=n~/.vim/viminfo
     let plugpath="~/.vim/plugged"
 
     if has("gui_running")
@@ -23,6 +24,7 @@ Plug 'NoahTheDuke/vim-just'
 Plug 'pearofducks/ansible-vim'
 Plug 'dense-analysis/ale'
 Plug 'mcchrish/nnn.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 if has("gui_running")
@@ -74,6 +76,8 @@ let g:airline_powerline_fonts = 1
 
 let g:ale_linters = { "python": ["ruff"] }
 let g:ale_fixers = { "python": ["ruff"] }
+
+autocmd BufNewFile,BufRead *.asm set filetype=nasm
 
 set encoding=utf8
 set ffs=unix,dos,mac
