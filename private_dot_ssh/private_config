@@ -16,7 +16,7 @@ host esos01
 host humax
     HostName humax.malaz.lan
     User root
-    PubkeyAcceptedKeyTypes=+ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
     SetEnv TERM=xterm-256color
 
 host pve
@@ -27,38 +27,46 @@ host borg
     HostName borg.malaz.lan
     User niall
 
+host phone
+    HostName 172.29.32.132
+    Port 2222
+    PubkeyAcceptedKeyTypes +ssh-rsa
+
+host cam1
+    HostName cam1.malaz.lan
+    User root
+
+host cam2
+    HostName cam2.malaz.lan
+    User root
+
 === WAN ===
 
 host gw7701
     HostName gw7701.opusivs.net
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host gw7702
     HostName gw7702.opusivs.net
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host gw7703
     HostName gw7703.opusivs.net
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host gw7704
     HostName gw7704.opusivs.net
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host ox-wan-sw02
     HostName 10.77.8.5
     User admin
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
-    HostKeyAlgorithms=+ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
+    HostKeyAlgorithms +ssh-rsa
     SetEnv TERM=xterm-256color
 
 === Server VLAN ===
@@ -66,432 +74,276 @@ host ox-wan-sw02
 host vc7701
     HostName 10.77.8.1
     User admin
-    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=xterm-256color
 
 host vc7702
     HostName 10.77.8.3
     User admin
-    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=xterm-256color
 
 host ox-lan-sw01
     HostName 10.77.8.4
     User admin
-    PubkeyAcceptedKeyTypes=+ssh-rsa
     SetEnv TERM=xterm-256color
 
-host docker01
-    HostName docker01.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker02
-    HostName docker02.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker03
-    HostName docker03.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker04
-    HostName docker04.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker05
-    HostName docker05.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker06
-    HostName docker06.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker07
-    HostName docker07.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker08
-    HostName docker08.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker09
-    HostName docker09.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker10
-    HostName docker10.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
+host ox-lan-sw02
+    HostName 10.77.8.6
+    User admin
+    SetEnv TERM=xterm-256color
 
 host docker11
     HostName docker11.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
-
-host docker12
-    HostName docker12.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker13
-    HostName docker13.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker14
-    HostName docker14.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker15
-    HostName docker15.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker16
-    HostName docker16.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker17
-    HostName docker17.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host docker18
-    HostName docker18.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-docker01
     HostName ox-docker01.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-docker02
     HostName ox-docker02.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-docker03
     HostName ox-docker03.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-docker04
     HostName ox-docker04.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-docker05
     HostName ox-docker05.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-docker06
     HostName ox-docker06.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-docker07
     HostName ox-docker07.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
+
+host ox-docker08
+    HostName ox-docker08.lan.autologic.com
+    User root
+
+host ox-docker09
+    HostName ox-docker09.lan.autologic.com
+    User root
 
 host app02
-    #HostName app02.lan.autologic.com
     HostName 10.77.32.254
     User root
     SetEnv TERM=xterm-256color
-    IdentityFile ~/.ssh/autologic
 
 host app03
     HostName app03.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app04
     HostName app04.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app05
     HostName app05.lan.autologic.com
     User root
     SetEnv TERM=xterm-256color
-    IdentityFile ~/.ssh/autologic
 
 host app09
     HostName app09.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app10
     HostName app10.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app11
     HostName app11.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app13
     HostName app13.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app15
     HostName app15.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app17
     HostName app17.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app20
     HostName app20.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app21
     HostName app21.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app22
     HostName app22.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host app23
     HostName app23.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host app25
     HostName app25.lan.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
 
 host app27
     HostName app27.lan.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
 
 host app28
     HostName app28.lan.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
 
 host app29
     HostName app29.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-app01
     HostName ox-app01.lan.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
 
 host ox-app03
     HostName ox-app03.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-app05
     HostName ox-app05.lan.autologic.com
     User alpine
-    IdentityFile ~/.ssh/autologic
 
 host ox-app22
     HostName ox-app22.lan.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
 
 host ox-app23
     HostName ox-app23.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
+
+host ox-app24
+    HostName ox-app24.lan.autologic.com
+    User debian
+
+host ox-app25
+    HostName ox-app25.lan.autologic.com
+    User alpine
 
 host ox-dev02
     HostName ox-dev02.lan.autologic.com
-    IdentityFile ~/.ssh/autologic
 
 host crm-test01
     HostName crm-test01.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
 
 host dev01
     HostName dev01.lan.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
-
-host dev02
-    HostName dev02.lan.autologic.com
-    User niall
-    IdentityFile ~/.ssh/autologic
-
-host dev03
-    HostName dev03.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
 
 host dev04
     HostName dev04.lan.autologic.com
     User niall
-    IdentityFile ~/.ssh/autologic
-
-host data00
-    HostName data00.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host data01
-    HostName data01.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host data02
-    HostName data02.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host data03
-    HostName data03.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host data04
-    HostName data04.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
 
 host data05
     HostName data05.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 host data06
     HostName data06.lan.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
+
+host ox-data05
+    HostName ox-data05.lan.autologic.com
+    User debian
+    SetEnv TERM=xterm-256color
 
 host log01
     HostName log01.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host nas01
     HostName nas01.lan.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host nas02
     HostName nas02.lan.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host nas03
     HostName nas03.lan.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host ox-nas05
     HostName ox-nas05.lan.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host dev-nas1
     HostName dev-nas1.lan.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host dev-nas2
     HostName dev-nas2.lan.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host ox-san02
     HostName ox-san02.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
 
 host vcentre
     HostName vcentre.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host vm00
     HostName vm00.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host vm01
     HostName vm01.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host vm02
     HostName vm02.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
-
-host vm03
-    HostName vm03.lan.autologic.com
-    User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-vm04
     HostName ox-vm04.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-vm05
     HostName ox-vm05.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-vm06
     HostName ox-vm06.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
 
 host ox-alienvault
     HostName ox-alienvault-usm.lan.autologic.com
     User sysadmin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host ox-jump
     HostName ox-jump.lan.autologic.com
     User alpine
-    IdentityFile ~/.ssh/autologic
 
 host ox-code.lan.autologic.com
     Port 10022
-    IdentityFile ~/.ssh/autologic
 
 host ox-alienvault
     HostName ox-alienvault-usm.lan.autologic.com
@@ -500,24 +352,20 @@ host ox-alienvault
 host pi0660uk
     HostName 10.77.28.51
     User alpine
-    IdentityFile ~/.ssh/autologic
 
 host pi0662uk
     HostName 10.77.28.43
     User alpine
-    IdentityFile ~/.ssh/autologic
 
 host pi0663uk
-    HostName 10.77.28.50
+    HostName 10.77.28.166
     User alpine
-    IdentityFile ~/.ssh/autologic
 
 Host spitfire
     Hostname spitfire.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
-    HostKeyAlgorithms=+ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
+    HostKeyAlgorithms +ssh-rsa
     SetEnv TERM=xterm-256color
 
 === Desktops VLAN ===
@@ -528,7 +376,6 @@ Host pc0666uk
 
 Host pc0239uk
     HostName 10.77.24.138
-    IdentityFile ~/.ssh/autologic
 
 === OOB ===
 
@@ -537,158 +384,150 @@ Host ox-oob01
     HostName 172.31.0.5
     ProxyJump ox-jump
 
+Host 172.31.0.5
+    User root
+    ProxyJump ox-jump
+
 === Cloud ===
 
 host crm01
     HostName crm01.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
     SetEnv TERM=xterm-256color
 
 host crm02
     HostName crm02.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host crm-stage
     HostName crm.autologic-test.com
     User debian
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host app02-ovh
     HostName app02.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
     SetEnv TERM=xterm-256color
 
 host app05-ovh
     HostName app05.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
 
 host app08-ovh
     HostName app08.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host cc
     HostName cc.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
 
 host ha02
     HostName ha02.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host ha03
     HostName ha03.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host db01
     HostName db01.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host db02
     HostName db02.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host db03
     HostName db03.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host db04
     HostName db04.autologic.com
     User admin
-    IdentityFile ~/.ssh/db04.pem
     SetEnv TERM=xterm-256color
 
 host legion
     HostName legion.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
     SetEnv TERM=xterm-256color
 
 host autolink
     HostName autolink.autologic.com
     User ec2-user
-    IdentityFile ~/.ssh/autolinkaws.pem
     SetEnv TERM=xterm-256color
 
 host casetracker
     HostName ec2-34-202-43-220.compute-1.amazonaws.com
     User ec2-user
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host portal
     HostName portal.autologic.com
     User centos
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host portal-stage
     HostName portal.autologic-test.com
     User centos
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host portal-dev
     HostName portal.autologic.tech
     User centos
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host crm-interface
     HostName crm-interface.autologic.com
     User centos
-    IdentityFile ~/.ssh/autologic
 
 host crm-interface-stage
     HostName crm-interface.autologic-test.com
     User centos
-    IdentityFile ~/.ssh/autologic
-
-host drivepro
-    HostName drivepro-decryption-license-proxy.autologic.com
-    User centos
-    IdentityFile ~/.ssh/autologic
 
 host email-service
     HostName email-service.autologic.com
     User centos
-    IdentityFile ~/.ssh/autologic
 
 host email-service-stage
     HostName email-service.autologic-test.com
     User centos
-    IdentityFile ~/.ssh/autologic
+
+host email-service-2
+    HostName 18.132.89.196
+    User ec2-user
+    SetEnv TERM=xterm-256color
+
+host email-service-2-deploy
+    HostName 18.132.89.196
+    User deploy
+    IdentityFile "~/.ssh/Email Service Prod 2 Key.pem"
+    ProxyJump ox-jump
+    SetEnv TERM=xterm-256color
+
+host niall-test
+    HostName 34.242.59.207
+    User ec2-user
+    IdentityFile ~/.ssh/niall-test.pem
+    SetEnv TERM=xterm-256color
 
 host kbs
     HostName kbs.autologic.com
     User centos
-    IdentityFile ~/.ssh/autologic
 
 host kbs-stage
     HostName kbs.autologic-test.com
     User centos
-    IdentityFile ~/.ssh/autologic
 
 host repo01
     HostName repo01.autologic.com
@@ -700,7 +539,6 @@ host repos
     HostName repo01.autologic.com
     User root
     port 2022
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host log01-aws
@@ -712,281 +550,247 @@ host bastion01
     HostName ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
     User ec2-user
     IdentityFile ~/.ssh/bastion-AL-legacy.pem
+    SetEnv TERM=xterm-256color
 
 host bastion01-deploy
     HostName ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
     User deploy
-    IdentityFile ~/.ssh/autologic
+
+host bastion02
+    HostName ec2-34-241-9-21.eu-west-1.compute.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/bastion-AL-webservices.pem
+    SetEnv TERM=xterm-256color
+
+host bastion02-deploy
+    HostName ec2-34-241-9-21.eu-west-1.compute.amazonaws.com
+    User deploy
 
 host docker01-al-legacy
     HostName ip-172-32-2-163.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker01-AL-legacy.pem
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
 
 host docker01-al-legacy-deploy
     HostName ip-172-32-2-163.eu-west-2.compute.internal
     User deploy
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion01-deploy
 
 host docker02-al-legacy
     HostName ip-172-32-3-105.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker02-AL-legacy.pem
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
 
 host docker02-al-legacy-deploy
     HostName ip-172-32-3-105.eu-west-2.compute.internal
     User deploy
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion01-deploy
 
 host docker03-al-legacy
     HostName ip-172-32-3-198.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker03-AL-legacy.pem
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
 
 host docker03-al-legacy-deploy
     HostName ip-172-32-3-198.eu-west-2.compute.internal
     User deploy
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion01-deploy
 
 host docker04-al-legacy
     HostName ip-172-32-2-210.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker04-AL-legacy.pem
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
 
 host docker04-al-legacy-deploy
     HostName ip-172-32-2-210.eu-west-2.compute.internal
     User deploy
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion01-deploy
 
 host docker05-al-legacy
     HostName ip-172-32-3-204.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker05-AL-legacy.pem
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
 
 host docker05-al-legacy-deploy
     HostName ip-172-32-3-204.eu-west-2.compute.internal
     User deploy
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion01-deploy
 
 host docker06-al-legacy
     HostName ip-172-32-3-40.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker06-AL-legacy.pem
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
 
 host docker06-al-legacy-deploy
     HostName ip-172-32-3-40.eu-west-2.compute.internal
     User deploy
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion01-deploy
 
 host docker07-al-legacy
     HostName ip-172-32-2-224.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker07-AL-legacy.pem
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
 
 host docker07-al-legacy-deploy
     HostName ip-172-32-2-224.eu-west-2.compute.internal
     User deploy
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion01-deploy
 
 host docker08-al-legacy
     HostName ip-172-32-3-160.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker08-AL-legacy.pem
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
 
 host docker08-al-legacy-deploy
     HostName ip-172-32-3-160.eu-west-2.compute.internal
     User deploy
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion01-deploy
 
 host docker09-al-legacy
     HostName ip-172-32-2-10.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker09-AL-legacy.pem
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
 
 host docker09-al-legacy-deploy
     HostName ip-172-32-2-10.eu-west-2.compute.internal
     User deploy
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion01-deploy
 
 host docker10-al-legacy
     HostName ip-172-32-3-229.eu-west-2.compute.internal
     User ec2-user
     IdentityFile ~/.ssh/docker10-AL-legacy.pem
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
 
 host docker10-al-legacy-deploy
     HostName ip-172-32-3-229.eu-west-2.compute.internal
     User deploy
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion01-deploy
+
+host docker11-al-webservices
+    HostName ip-172-33-141-65.eu-west-1.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker11-AL-webservices.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion02
+
+host docker11-al-webservices-deploy
+    HostName ip-172-33-141-65.eu-west-1.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion02-deploy
 
 === Cloud automation defaults ===
 
 host ip-172-32-*-*.eu-west-2.compute.internal
     User ec2-user
-    IdentityFile ~/.ssh/autologic
+    SetEnv TERM=xterm-256color
     ProxyJump bastion01
+
+host ip-172-33-*-*.eu-west-1.compute.internal
+    User ec2-user
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion02
 
 # db04
 host ec2-3-11-206-111.eu-west-2.compute.amazonaws.com
     User admin
-    IdentityFile ~/.ssh/autologic
 
 host ec2-*.*.compute.amazonaws.com
     User ec2-user
-    IdentityFile ~/.ssh/autologic
-
-=== New York ===
-
-host gw11
-    HostName gw11.autologic.com
-    User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
-
-host gw12
-    HostName gw12.autologic.com
-    User admin
-    IdentityFile ~/.ssh/autologic
-    SetEnv TERM=xterm-256color
-
-host juniper-ny
-    HostName 10.65.32.1
-    User admin
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
-    SetEnv TERM=xterm-256color
-
-host ny-vm01
-    HostName 10.65.8.2
-    User root
-    IdentityFile ~/.ssh/autologic
-    ProxyJump ox-jump
-
-host ny-nas01
-    HostName ny-nas01.opusivs.world
-    User admin
-    IdentityFile ~/.ssh/autologic
-    SetEnv TERM=xterm-256color
-
-Host ny-app01
-    HostName 10.65.32.17
-    User root
-    IdentityFile ~/.ssh/autologic
-
-Host ny-app03
-    HostName 10.65.32.22
-    User debian
-    IdentityFile ~/.ssh/autologic
-
-host ny-docker01
-    HostName 10.65.32.13
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host ny-docker02
-    HostName 10.65.32.15
-    User root
-    IdentityFile ~/.ssh/autologic
-
-host ny-duo01
-    HostName 10.65.32.23
-    User debian
-    IdentityFile ~/.ssh/autologic
 
 === Melbourne ===
 
 host gw09
     HostName gw09.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host gw10
     HostName gw10.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host au-vm01
     HostName au-vm01.au.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
     ProxyJump ox-jump
 
 host au-nas01
     HostName au-nas01.au.lan.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
 host au-log01
     HostName au-log01.au.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
 host au-relay01
     HostName au-relay01.au.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
 host au-duo01
     HostName au-duo01.au.lan.autologic.com
     User debian
-    IdentityFile ~/.ssh/autologic
-    IdentityFile ~/.ssh/autologic
     ProxyJump ox-jump
 
 host au-app01
     HostName au-app01.au.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
 host au-docker01
     HostName au-docker01.au.lan.autologic.com
     User root
-    IdentityFile ~/.ssh/autologic
-    IdentityFile ~/.ssh/autologic
     ProxyJump ox-jump
 
 host au-juniper
     HostName au-sw01.au.lan.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
 host au-4g
     HostName 10.69.33.1
     User root
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
     ProxyJump ox-jump
 
 === LA ===
@@ -994,14 +798,12 @@ host au-4g
 host gw05
     HostName gw05.autologic.com
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
-host juniper-la
+host la-juniper
     HostName 10.67.10.2
     User admin
-    IdentityFile ~/.ssh/autologic
-    PubkeyAcceptedKeyTypes=+ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
@@ -1010,148 +812,120 @@ host juniper-la
 Host gw7501
     HostName gw7501.opusivs.net
     User root
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 Host gw7502
     HostName gw7502.opusivs.net
     User root
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 Host dx-vmhost01
     HostName 10.75.8.20
     User root
-    IdentityFile ~/.ssh/autologic
 
 Host dx-vmhost02
     HostName 10.75.8.21
     User root
-    IdentityFile ~/.ssh/autologic
 
 Host dx-vmhost03
     HostName 10.75.8.22
     User root
-    IdentityFile ~/.ssh/autologic
 
 Host dx-nas01
     HostName dx-nas01.opusivs.world
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 Host dx-nas02
     HostName dx-nas02.opusivs.world
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 Host dx-nas03
     HostName dx-nas03.opusivs.world
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 Host dx-vcentre
     HostName dx-vcenter01.opusivs.world
     User root
-    IdentityFile ~/.ssh/autologic
 
 Host vc7501
     HostName 10.75.8.1
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 Host vc7502
     HostName 10.75.8.2
     User admin
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 Host dx-app03
     HostName dx-app03.opusivs.world
     User debian
-    IdentityFile ~/.ssh/autologic
 
 Host dx-app04
     HostName dx-app04.opusivs.world
     User debian
-    IdentityFile ~/.ssh/autologic
 
 Host dx-app09
     HostName dx-app09.opusivs.world
     User root
-    IdentityFile ~/.ssh/autologic
 
 Host dx-app14
     HostName dx-app14.opusivs.world
     User debian
-    IdentityFile ~/.ssh/autologic
 
 Host dx-app16
     HostName dx-app16.opusivs.world
     User debian
-    IdentityFile ~/.ssh/autologic
 
 host dx-app15
     HostName dx-app15.opusivs.world
     User root
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 host dx-app18
     HostName dx-app18.opusivs.world
     User root
-    IdentityFile ~/.ssh/autologic
     SetEnv TERM=xterm-256color
 
 Host dx-db01
     HostName dx-db01.opusivs.world
     User debian
-    IdentityFile ~/.ssh/autologic
 
 Host dx-db02
     HostName dx-db02.opusivs.world
     User debian
-    IdentityFile ~/.ssh/autologic
 
 Host dx-db03
     HostName dx-db03.opusivs.world
     User debian
-    IdentityFile ~/.ssh/autologic
 
 Host dx-zabbix01
     HostName dx-zabbix01.opusivs.world
     User itadmin
-    IdentityFile ~/.ssh/autologic
 
 Host dx-docker01
     HostName dx-docker01.opusivs.world
     User root
-    IdentityFile ~/.ssh/autologic
 
 Host dx-docker02
     HostName dx-docker02.opusivs.world
     User root
-    IdentityFile ~/.ssh/autologic
 
 Host dx-docker03
     HostName dx-docker03.opusivs.world
     User root
-    IdentityFile ~/.ssh/autologic
 
 Host dx-docker04
     HostName dx-docker04.opusivs.world
     User root
-    IdentityFile ~/.ssh/autologic
 
 Host dx-docker05
     HostName dx-docker05.opusivs.world
     User root
-    IdentityFile ~/.ssh/autologic
 
 Host dx-docker06
     HostName dx-docker06.opusivs.world
     User root
-    IdentityFile ~/.ssh/autologic
