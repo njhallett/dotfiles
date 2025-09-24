@@ -358,7 +358,7 @@ host pi0662uk
     User alpine
 
 host pi0663uk
-    HostName 10.77.28.166
+    HostName 10.77.28.13
     User alpine
 
 Host spitfire
@@ -415,7 +415,7 @@ host app02-ovh
 host app05-ovh
     HostName app05.autologic.com
     User root
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    SetEnv TERM=xterm-256color
 
 host app08-ovh
     HostName app08.autologic.com
@@ -490,18 +490,22 @@ host portal-dev
 host crm-interface
     HostName crm-interface.autologic.com
     User centos
+    SetEnv TERM=xterm-256color
 
 host crm-interface-stage
     HostName crm-interface.autologic-test.com
     User centos
+    SetEnv TERM=xterm-256color
 
 host email-service
-    HostName email-service.autologic.com
+    HostName ec2-34-251-211-20.eu-west-1.compute.amazonaws.com
     User centos
+    SetEnv TERM=xterm-256color
 
 host email-service-stage
     HostName email-service.autologic-test.com
     User centos
+    SetEnv TERM=xterm-256color
 
 host email-service-2
     HostName 18.132.89.196
@@ -524,10 +528,22 @@ host niall-test
 host kbs
     HostName kbs.autologic.com
     User centos
+    SetEnv TERM=xterm-256color
 
 host kbs-stage
     HostName kbs.autologic-test.com
     User centos
+    SetEnv TERM=xterm-256color
+
+host vehicle
+    HostName vehicle-data.autologic.com
+    User centos
+    SetEnv TERM=xterm-256color
+
+host vehicle-stage
+    HostName vehicle-data.autologic-test.com
+    User centos
+    SetEnv TERM=xterm-256color
 
 host repo01
     HostName repo01.autologic.com
@@ -709,6 +725,71 @@ host docker11-al-webservices-deploy
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion02-deploy
 
+host docker12-al-webservices
+    HostName ip-172-33-136-105.eu-west-1.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker12-AL-webservices.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion02
+
+host docker12-al-webservices-deploy
+    HostName ip-172-33-136-105.eu-west-1.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion02-deploy
+
+host docker13-al-webservices
+    HostName ip-172-33-148-39.eu-west-1.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker13-AL-webservices.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion02
+
+host docker13-al-webservices-deploy
+    HostName ip-172-33-136-105.eu-west-1.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion02-deploy
+
+host docker14-al-webservices
+    HostName ip-172-33-129-55.eu-west-1.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker14-AL-webservices.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion02
+
+host docker14-al-webservices-deploy
+    HostName ip-172-33-129-55.eu-west-1.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion02-deploy
+
+host docker15-al-webservices
+    HostName ip-172-33-130-150.eu-west-1.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker15-AL-webservices.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion02
+
+host docker15-al-webservices-deploy
+    HostName ip-172-33-130-150.eu-west-1.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion02-deploy
+
+host docker16-al-webservices
+    HostName ip-172-33-145-199.eu-west-1.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker16-AL-webservices.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion02
+
+host docker16-al-webservices-deploy
+    HostName ip-172-33-145-199.eu-west-1.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion02-deploy
+
 === Cloud automation defaults ===
 
 host ip-172-32-*-*.eu-west-2.compute.internal
@@ -769,6 +850,11 @@ host au-duo01
     User debian
     ProxyJump ox-jump
 
+host au-duo02
+    HostName au-duo02.au.lan.autologic.com
+    User debian
+    ProxyJump ox-jump
+
 host au-app01
     HostName au-app01.au.lan.autologic.com
     User root
@@ -819,17 +905,25 @@ Host gw7502
     User root
     SetEnv TERM=xterm-256color
 
-Host dx-vmhost01
+Host dx-vm01
     HostName 10.75.8.20
     User root
+    SetEnv TERM=xterm-256color
 
-Host dx-vmhost02
+Host dx-vm02
     HostName 10.75.8.21
     User root
+    SetEnv TERM=xterm-256color
 
-Host dx-vmhost03
+Host dx-vm03
     HostName 10.75.8.22
     User root
+    SetEnv TERM=xterm-256color
+
+Host dx-vm04
+    HostName 10.75.8.23
+    User root
+    SetEnv TERM=xterm-256color
 
 Host dx-nas01
     HostName dx-nas01.opusivs.world
