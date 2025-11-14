@@ -131,6 +131,10 @@ host ox-docker09
     HostName ox-docker09.lan.autologic.com
     User root
 
+host ox-docker10
+    HostName ox-docker10.lan.autologic.com
+    User root
+
 host app02
     HostName 10.77.32.254
     User root
@@ -208,6 +212,10 @@ host app29
 
 host ox-app01
     HostName ox-app01.lan.autologic.com
+    User debian
+
+host ox-app02
+    HostName ox-app02.lan.autologic.com
     User debian
 
 host ox-app03
@@ -562,6 +570,12 @@ host log01-aws
     User ec2-user
     IdentityFile ~/.ssh/log01.pem
 
+host ftp10
+    HostName ec2-3-231-153-114.compute-1.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/FTP10OpusIVScom.pem
+    SetEnv TERM=xterm-256color
+
 host bastion01
     HostName ec2-52-56-54-48.eu-west-2.compute.amazonaws.com
     User ec2-user
@@ -580,6 +594,16 @@ host bastion02
 
 host bastion02-deploy
     HostName ec2-34-241-9-21.eu-west-1.compute.amazonaws.com
+    User deploy
+
+host bastion03
+    HostName ec2-98-91-8-22.compute-1.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/bastion-oe-toolbox.pem
+    SetEnv TERM=xterm-256color
+
+host bastion03-deploy
+    HostName ec2-98-91-8-22.compute-1.amazonaws.com
     User deploy
 
 host docker01-al-legacy
@@ -790,6 +814,19 @@ host docker16-al-webservices-deploy
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion02-deploy
 
+host portal-oetoolbox-dev
+    HostName ip-172-34-141-23.ec2.internal
+    User ec2-user
+    IdentityFile ~/.ssh/portal-oetoolbox-dev.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion03
+
+host portal-oetoolbox-dev-deploy
+    HostName ip-172-34-141-23.ec2.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion03-deploy
+
 === Cloud automation defaults ===
 
 host ip-172-32-*-*.eu-west-2.compute.internal
@@ -801,6 +838,11 @@ host ip-172-33-*-*.eu-west-1.compute.internal
     User ec2-user
     SetEnv TERM=xterm-256color
     ProxyJump bastion02
+
+host ip-172-34-*-*.ec2.internal
+    User ec2-user
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion03
 
 # db04
 host ec2-3-11-206-111.eu-west-2.compute.amazonaws.com
@@ -866,10 +908,16 @@ host au-docker01
     User root
     ProxyJump ox-jump
 
+host au-docker02
+    HostName au-docker02.au.lan.autologic.com
+    User root
+    ProxyJump ox-jump
+
 host au-juniper
     HostName au-sw01.au.lan.autologic.com
     User admin
     PubkeyAcceptedKeyTypes +ssh-rsa
+    HostKeyAlgorithms +ssh-rsa
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
@@ -984,6 +1032,10 @@ host dx-app18
     User root
     SetEnv TERM=xterm-256color
 
+host dx-app24
+    HostName dx-app24.opusivs.world
+    User debian
+
 Host dx-db01
     HostName dx-db01.opusivs.world
     User debian
@@ -1022,4 +1074,8 @@ Host dx-docker05
 
 Host dx-docker06
     HostName dx-docker06.opusivs.world
+    User root
+
+Host dx-docker07
+    HostName dx-docker07.opusivs.world
     User root
