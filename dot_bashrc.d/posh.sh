@@ -13,4 +13,4 @@ update_posh_themes() {
     rm "${cache_dir}/themes.zip"
 }
 
-[[ $(tty) != "/dev/tty"* ]] && eval "$(posh init bash --config "$(posh cache path)/themes/gruvbox-basic-dark.omp.json")"
+[[ $(command -v posh) ]] && [[ $(tty) != "/dev/tty"* ]] && eval "$(posh init bash --config "$(posh cache path)/themes/gruvbox-basic-dark.omp.json")"
