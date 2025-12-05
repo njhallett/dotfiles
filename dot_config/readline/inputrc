@@ -23,3 +23,6 @@ set echo-control-characters off
 # Disable Bash 5.1 highlighted paste feature. 
 # See: https://is.gd/fsgOMe & https://is.gd/Uccmae
 set enable-bracketed-paste off
+# change cursor for vi mode
+set vi-cmd-mode-string "\1\e]12;purple\a\e[2 q\2"
+set vi-ins-mode-string "\1\e]12;aqua\a\e[2 q\2"
