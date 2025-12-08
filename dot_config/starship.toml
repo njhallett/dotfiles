@@ -1,8 +1,9 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](color_orange)\
+[](fg:color_bg1)\
 $os\
+[](fg:color_bg1 bg:color_orange)\
 $username\
 $hostname\
 [](bg:color_yellow fg:color_orange)\
@@ -30,6 +31,8 @@ $time\
 [ ](fg:color_bg1)\
 $line_break$character"""
 
+scan_timeout = 50
+
 palette = 'gruvbox_dark'
 
 [palettes.gruvbox_dark]
@@ -46,7 +49,7 @@ color_yellow = '#d79921'
 
 [os]
 disabled = false
-style = "bg:color_orange fg:color_fg0"
+style = "bg:color_bg1 fg:color_fg0"
 
 [os.symbols]
 Windows = "󰍲"
@@ -76,7 +79,7 @@ Pop = ""
 show_always = true
 style_user = "bg:color_orange fg:color_fg0"
 style_root = "bg:color_orange fg:color_fg0"
-format = '[ $user]($style)'
+format = '[$user]($style)'
 
 [hostname]
 disabled = false
