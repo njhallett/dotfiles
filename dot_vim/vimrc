@@ -10,7 +10,7 @@ else
     let plugpath="~/.vim/plugged"
 
     if has("gui_running")
-        set gfn=CaskaydiaCove\ Nerd\ Font\ Mono\ 9
+        set gfn=Cascadia\ Code\ NF\ 9
     endif             
 
 endif
