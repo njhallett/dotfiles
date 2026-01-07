@@ -19,8 +19,8 @@ host humax
     PubkeyAcceptedKeyTypes +ssh-rsa
     SetEnv TERM=xterm-256color
 
-host pve
-    HostName pve.malaz.lan
+host pve01
+    HostName pve01.malaz.lan
     User root
 
 host borg
@@ -606,6 +606,16 @@ host bastion03-deploy
     HostName ec2-98-91-8-22.compute-1.amazonaws.com
     User deploy
 
+host bastion04
+    HostName ec2-34-251-160-156.eu-west-1.compute.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/bastion-AL-portal.pem
+    SetEnv TERM=xterm-256color
+
+host bastion04-deploy
+    HostName ec2-34-251-160-156.eu-west-1.compute.amazonaws.com
+    User deploy
+
 host docker01-al-legacy
     HostName ip-172-32-2-163.eu-west-2.compute.internal
     User ec2-user
@@ -814,6 +824,19 @@ host docker16-al-webservices-deploy
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion02-deploy
 
+host docker18-al-portal
+    HostName ip-172-35-133-203.eu-west-1.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker18-AL-portal.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion04
+
+host docker18-al-docker-deploy
+    HostName ip-172-35-133-203.eu-west-1.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion04-deploy
+
 host portal-oetoolbox-dev
     HostName ip-172-34-141-23.ec2.internal
     User ec2-user
@@ -826,6 +849,19 @@ host portal-oetoolbox-dev-deploy
     User deploy
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion03-deploy
+
+host portal-oetoolbox-qa
+    HostName ip-172-34-155-59.ec2.internal
+    User ec2-user
+    IdentityFile ~/.ssh/Portal-OE-Toolbox-QA.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion03
+
+host portal-oetoolbox-qa-deploy
+    HostName ip-172-34-155-59.ec2.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion03
 
 === Cloud automation defaults ===
 
@@ -887,9 +923,10 @@ host au-relay01
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
-host au-duo01
-    HostName au-duo01.au.lan.autologic.com
-    User debian
+host au-relay02
+    HostName au-relay02.au.lan.autologic.com
+    User alpine
+    SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
 host au-duo02
@@ -1079,3 +1116,9 @@ Host dx-docker06
 Host dx-docker07
     HostName dx-docker07.opusivs.world
     User root
+
+=== AE ===
+
+Host autoenginuity
+    HostName autoenginuity.com
+    User t3xx9aiguijb
