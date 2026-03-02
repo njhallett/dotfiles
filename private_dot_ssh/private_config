@@ -1,4 +1,4 @@
-=== Home ===
+# Home
 
 host gw
     HostName gw.njhallett.net
@@ -40,7 +40,7 @@ host cam2
     HostName cam2.malaz.lan
     User root
 
-=== WAN ===
+# WAN
 
 host gw7701
     HostName gw7701.opusivs.net
@@ -69,7 +69,7 @@ host ox-wan-sw02
     HostKeyAlgorithms +ssh-rsa
     SetEnv TERM=xterm-256color
 
-=== Server VLAN ===
+# Server VLAN
 
 host vc7701
     HostName 10.77.8.1
@@ -376,7 +376,7 @@ Host spitfire
     HostKeyAlgorithms +ssh-rsa
     SetEnv TERM=xterm-256color
 
-=== Desktops VLAN ===
+# Desktops VLAN
 
 Host pc0666uk
     HostName pc0666uk.lan.autologic.com
@@ -385,7 +385,7 @@ Host pc0666uk
 Host pc0239uk
     HostName 10.77.24.138
 
-=== OOB ===
+# OOB
 
 Host ox-oob01
     User alpine
@@ -396,7 +396,7 @@ Host 172.31.0.5
     User root
     ProxyJump ox-jump
 
-=== Cloud ===
+# Cloud
 
 host crm01
     HostName crm01.autologic.com
@@ -574,6 +574,12 @@ host ftp10
     HostName ec2-3-231-153-114.compute-1.amazonaws.com
     User ec2-user
     IdentityFile ~/.ssh/FTP10OpusIVScom.pem
+    SetEnv TERM=xterm-256color
+
+host smtp01
+    HostName ec2-13-43-59-143.eu-west-2.compute.amazonaws.com
+    User alpine
+    IdentityFile ~/.ssh/smtp01.pem
     SetEnv TERM=xterm-256color
 
 host bastion01
@@ -831,7 +837,7 @@ host docker18-al-portal
     SetEnv TERM=xterm-256color
     ProxyJump bastion04
 
-host docker18-al-docker-deploy
+host docker18-al-portal-deploy
     HostName ip-172-35-133-203.eu-west-1.compute.internal
     User deploy
     SetEnv TERM=xterm-256color
@@ -863,7 +869,7 @@ host portal-oetoolbox-qa-deploy
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion03
 
-=== Cloud automation defaults ===
+# Cloud automation defaults
 
 host ip-172-32-*-*.eu-west-2.compute.internal
     User ec2-user
@@ -888,7 +894,7 @@ host ec2-*.*.compute.amazonaws.com
     User ec2-user
     SetEnv TERM=xterm-256color
 
-=== Melbourne ===
+# Melbourne
 
 host gw09
     HostName gw09.autologic.com
@@ -964,7 +970,7 @@ host au-4g
     PubkeyAcceptedKeyTypes +ssh-rsa
     ProxyJump ox-jump
 
-=== LA ===
+# LA
 
 host gw05
     HostName gw05.autologic.com
@@ -978,7 +984,7 @@ host la-juniper
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump
 
-=== Dexter ===
+# Dexter
 
 Host gw7501
     HostName gw7501.opusivs.net
@@ -1117,7 +1123,7 @@ Host dx-docker07
     HostName dx-docker07.opusivs.world
     User root
 
-=== AE ===
+# AE
 
 Host autoenginuity
     HostName autoenginuity.com
