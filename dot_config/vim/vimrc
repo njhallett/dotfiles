@@ -6,8 +6,8 @@ if has("win16") || has("win32")
     set shell=pwsh.exe
     set shellcmdflag=-NoLogo\ -NoProfile\ -NonInteractive\ -command
 else
-    set viminfo+=n~/.vim/viminfo
-    let plugpath="~/.vim/plugged"
+    set viminfo+=n~/.config/vim/viminfo
+    let plugpath="~/.config/vim/plugged"
 
     if has("gui_running")
         set gfn=Cascadia\ Code\ NF\ 9
