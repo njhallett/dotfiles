@@ -16,10 +16,13 @@ else
 endif
 
 call plug#begin(plugpath)
+Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/everforest'
+Plug 'nordtheme/vim'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
-Plug 'sainnhe/gruvbox-material'
 Plug 'NoahTheDuke/vim-just'
 Plug 'pearofducks/ansible-vim'
 Plug 'dense-analysis/ale'
@@ -52,27 +55,18 @@ else
 
 endif
 
-set background=dark
-"set background=light
-
-" Set contrast.
-" This configuration option should be placed before `colorscheme gruvbox-material`.
-" Available values: 'hard', 'medium'(default), 'soft'
-let g:gruvbox_material_background = 'hard'
-
-" For better performance
-let g:gruvbox_material_better_performance = 1
-
-try
-    "colorscheme dracula
-    "colorscheme PaperColor
-    "autocmd vimenter * ++nested colorscheme gruvbox
-    colorscheme gruvbox-material
-catch
-endtry
-
-let g:airline_theme='base16_gruvbox_dark_hard'
 let g:airline_powerline_fonts = 1
+
+let g:theme_file = expand('~/.config/vim/theme.vim')
+
+if filereadable(g:theme_file)
+    execute 'source ' . g:theme_file
+endif
+
+augroup ThemeSync
+    autocmd!
+    autocmd FocusGained * if filereadable(g:theme_file) | execute 'source ' . g:theme_file | endif
+augroup END
 
 let g:ale_linters = { "python": ["ruff"] }
 let g:ale_fixers = { "python": ["ruff"] }

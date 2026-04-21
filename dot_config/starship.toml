@@ -33,7 +33,32 @@ $line_break$character"""
 
 scan_timeout = 50
 
-palette = 'gruvbox_dark'
+palette = "tokyonight_light"
+
+[palettes.tokyonight_light]
+#color_fg0 = '#223354'
+color_fg0 = '#DCDDE3'
+color_bg1 = '#e1e2e7'
+color_bg3 = '#b4b5b9'     # Muted contrast
+color_blue = '#2e7de9'    # Bright Sky Blue
+color_aqua = '#007197'    # Deep Ocean Teal
+color_green = '#387002'   # Sharp Forest Green
+color_purple = '#7847bd'  # Clean Violet
+color_red = '#f52a65'     # Vivid Berry Red
+color_orange = '#964c7b'  # Muted Plum
+color_yellow = '#006a83'  # Deep Cyan
+
+[palettes.gruvbox_light]
+color_fg0 = '#282828'
+color_bg1 = '#ebdbb2'
+color_bg3 = '#bdae93'
+color_blue = '#076678'
+color_aqua = '#427b58'
+color_green = '#79740e'
+color_orange = '#af3a03'
+color_purple = '#8f3f71'
+color_red = '#9d0006'
+color_yellow = '#b57614'
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
@@ -46,6 +71,18 @@ color_orange = '#d65d0e'
 color_purple = '#b16286'
 color_red = '#cc241d'
 color_yellow = '#d79921'
+
+[palettes.nord]
+color_fg0 = '#ECEFF4'     # nord6 (snow storm)
+color_bg1 = '#3B4252'     # nord1 (polar night)
+color_bg3 = '#4C566A'     # nord3 (polar night)
+color_blue = '#81A1C1'    # nord9 (frost)
+color_aqua = '#88C0D0'    # nord8 (frost)
+color_green = '#A3BE8C'   # nord14 (aurora)
+color_orange = '#B48EAD'  # nord15 (aurora - used for username/os)
+color_purple = '#5E81AC'  # nord10 (frost)
+color_red = '#BF616A'     # nord11 (aurora)
+color_yellow = '#D08770'  # nord12 (aurora - used for directory)
 
 [os]
 disabled = false
