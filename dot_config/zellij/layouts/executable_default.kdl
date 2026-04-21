@@ -1,0 +1,27 @@
+layout {
+    // Top bar plugin
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+
+    // Main workspace split
+    pane split_direction="vertical" {
+        // Left side: nnn
+        pane {
+            command "nnn"
+            close_on_exit true
+            size "40%"
+        }
+        // Right side: Shell
+        pane {
+            command "bash"
+            close_on_exit true
+            focus true
+        }
+    }
+
+    // Bottom status bar plugin
+    pane size=2 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+}
