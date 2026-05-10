@@ -36,9 +36,9 @@ scan_timeout = 50
 palette = "tokyonight_light"
 
 [palettes.tokyonight_light]
-#color_fg0 = '#223354'
 color_fg0 = '#DCDDE3'
 color_bg1 = '#e1e2e7'
+color_bg2 = '#cfd1d9'     # Subtle Contrast
 color_bg3 = '#b4b5b9'     # Muted contrast
 color_blue = '#2e7de9'    # Bright Sky Blue
 color_aqua = '#007197'    # Deep Ocean Teal
@@ -86,7 +86,7 @@ color_yellow = '#D08770'  # nord12 (aurora - used for directory)
 
 [os]
 disabled = false
-style = "bg:color_bg1 fg:color_fg0"
+style = "bg:color_bg1 fg:color_blue"
 
 [os.symbols]
 Windows = "󰍲"
