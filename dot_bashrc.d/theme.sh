@@ -10,6 +10,7 @@ set_theme_day() {
             airline_theme="gruvbox_material"
             z_theme="gruvbox-light"
             vim_perf="let g:gruvbox_material_better_performance = 1"
+            neomutt_theme="Gruvbox\ Light.rc"
             ;;
         *)
             foot_theme="tokyonight-light"
@@ -18,6 +19,7 @@ set_theme_day() {
             airline_theme="catppuccin_latte"
             z_theme="catppuccin-latte"
             vim_perf=""
+            neomutt_theme="TokyoNight\ Day.rc"
             ;;
     esac
 
@@ -25,7 +27,6 @@ set_theme_day() {
 
     # 1. Foot Terminal
     sed -i "s|^include=.*|include=/usr/share/foot/themes/$foot_theme|" ~/.config/foot/foot.ini
-    pkill -USR1 ^foot$
 
     # 2. Starship
     sed -i "s|^palette =.*|palette = \"$star_palette\"|" ~/.config/starship.toml
@@ -40,6 +41,9 @@ $vim_perf
 colorscheme $vim_colorscheme
 let g:airline_theme='$airline_theme'
 EOF
+
+    # 5. Neomutt
+    sed -i "s|^source ~/.config/neomutt/themes/palette/.*|source ~/.config/neomutt/themes/palette/$(printf %q "$neomutt_theme")|" ~/.config/neomutt/neomuttrc
 }
 
 set_theme_night() {
@@ -54,6 +58,7 @@ set_theme_night() {
             airline_theme="base16_gruvbox_dark_hard"
             z_theme="gruvbox-dark"
             vim_extra="let g:gruvbox_material_background = 'hard'\nlet g:gruvbox_material_better_performance = 1"
+            neomutt_theme="Gruvbox\ Dark.rc"
             ;;
         *)
             foot_theme="nord"
@@ -62,6 +67,7 @@ set_theme_night() {
             airline_theme="nord"
             z_theme="nord"
             vim_extra=""
+            neomutt_theme="Nord.rc"
             ;;
     esac
 
@@ -69,7 +75,6 @@ set_theme_night() {
 
     # 1. Foot Terminal
     sed -i "s|^include=.*|include=/usr/share/foot/themes/$foot_theme|" ~/.config/foot/foot.ini
-    pkill -USR1 ^foot$
 
     # 2. Starship
     sed -i "s|^palette =.*|palette = \"$star_palette\"|" ~/.config/starship.toml
@@ -84,6 +89,9 @@ $(echo -e "$vim_extra")
 colorscheme $vim_colorscheme
 let g:airline_theme='$airline_theme'
 EOF
+
+    # 5. Neomutt
+    sed -i "s|^source ~/.config/neomutt/themes/palette/.*|source ~/.config/neomutt/themes/palette/$(printf %q "$neomutt_theme")|" ~/.config/neomutt/neomuttrc
 }
 
 alias day='set_theme_day'

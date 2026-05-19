@@ -1,8 +1,7 @@
 # vim: filetype=muttrc
 
 #source ~/.config/neomutt/settings
-source ~/.config/neomutt/gruvbox/colors-gruvbox-shuber.muttrc
-source ~/.config/neomutt/gruvbox/colors-gruvbox-shuber-extended.muttrc
+source ~/.config/neomutt/themes/palette/Nord.rc
 #source ~/.config/neomutt/mappings
 
 # Accounts
