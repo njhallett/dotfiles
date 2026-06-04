@@ -11,6 +11,7 @@ set_theme_day() {
             z_theme="gruvbox-light"
             vim_perf="let g:gruvbox_material_better_performance = 1"
             neomutt_theme="Gruvbox\ Light.rc"
+            bat_theme="gruvbox-light"
             ;;
         *)
             foot_theme="tokyonight-light"
@@ -20,6 +21,7 @@ set_theme_day() {
             z_theme="catppuccin-latte"
             vim_perf=""
             neomutt_theme="TokyoNight\ Day.rc"
+            bat_theme="Catppuccin Latte"
             ;;
     esac
 
@@ -44,6 +46,9 @@ EOF
 
     # 5. Neomutt
     sed -i "s|^source ~/.config/neomutt/themes/palette/.*|source ~/.config/neomutt/themes/palette/$(printf %q "$neomutt_theme")|" ~/.config/neomutt/neomuttrc
+
+    # 6. bat
+    sed -i "s/^--theme=.*/--theme=\"$bat_theme\"/" ~/.config/bat/config
 }
 
 set_theme_night() {
@@ -59,6 +64,7 @@ set_theme_night() {
             z_theme="gruvbox-dark"
             vim_extra="let g:gruvbox_material_background = 'hard'\nlet g:gruvbox_material_better_performance = 1"
             neomutt_theme="Gruvbox\ Dark.rc"
+            bat_theme="gruvbox-dark"
             ;;
         *)
             foot_theme="nord"
@@ -68,6 +74,7 @@ set_theme_night() {
             z_theme="nord"
             vim_extra=""
             neomutt_theme="Nord.rc"
+            bat_theme="Nord"
             ;;
     esac
 
@@ -92,6 +99,9 @@ EOF
 
     # 5. Neomutt
     sed -i "s|^source ~/.config/neomutt/themes/palette/.*|source ~/.config/neomutt/themes/palette/$(printf %q "$neomutt_theme")|" ~/.config/neomutt/neomuttrc
+
+    # 6. bat
+    sed -i "s/^--theme=.*/--theme=\"$bat_theme\"/" ~/.config/bat/config
 }
 
 alias day='set_theme_day'
