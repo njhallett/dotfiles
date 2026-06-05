@@ -12,6 +12,7 @@ set_theme_day() {
             vim_perf="let g:gruvbox_material_better_performance = 1"
             neomutt_theme="Gruvbox\ Light.rc"
             bat_theme="gruvbox-light"
+            nnn_theme="4f8c450200af4cbd09c66a946c" # gruvbox-light
             ;;
         *)
             foot_theme="tokyonight-light"
@@ -22,6 +23,7 @@ set_theme_day() {
             vim_perf=""
             neomutt_theme="TokyoNight\ Day.rc"
             bat_theme="Catppuccin Latte"
+            nnn_theme="1F8C1202005F2309c66A5B6C" # tokyonight-light
             ;;
     esac
 
@@ -49,6 +51,10 @@ EOF
 
     # 6. bat
     sed -i "s/^--theme=.*/--theme=\"$bat_theme\"/" ~/.config/bat/config
+
+    # 7. nnn
+    sed -i "s/^export NNN_FCOLORS=.*/export NNN_FCOLORS=\"$nnn_theme\"/" ~/.bashrc.d/nnn.sh
+    export NNN_FCOLORS="$nnn_theme"
 }
 
 set_theme_night() {
@@ -65,6 +71,7 @@ set_theme_night() {
             vim_extra="let g:gruvbox_material_background = 'hard'\nlet g:gruvbox_material_better_performance = 1"
             neomutt_theme="Gruvbox\ Dark.rc"
             bat_theme="gruvbox-dark"
+            nnn_theme="3cba272e00d668cc24c6d6b166" # gruvbox-dark
             ;;
         *)
             foot_theme="nord"
@@ -75,6 +82,7 @@ set_theme_night() {
             vim_extra=""
             neomutt_theme="Nord.rc"
             bat_theme="Nord"
+            nnn_theme="0B0B04060006060009060B06" # nord
             ;;
     esac
 
@@ -102,6 +110,10 @@ EOF
 
     # 6. bat
     sed -i "s/^--theme=.*/--theme=\"$bat_theme\"/" ~/.config/bat/config
+
+    # 7. nnn
+    sed -i "s/^export NNN_FCOLORS=.*/export NNN_FCOLORS=\"$nnn_theme\"/" ~/.bashrc.d/nnn.sh
+    export NNN_FCOLORS="$nnn_theme"
 }
 
 alias day='set_theme_day'
