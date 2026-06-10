@@ -2,7 +2,7 @@ set nocompatible
 
 if has("win16") || has("win32")
     let plugpath="~/vimfiles/plugged"
-    set gfn=Cascadia\ Code\ NF:h9
+    set gfn=Cascadia\ Code\ NF:h10
     set shell=pwsh.exe
     set shellcmdflag=-NoLogo\ -NoProfile\ -NonInteractive\ -command
 else
@@ -10,7 +10,7 @@ else
     let plugpath="~/.config/vim/plugged"
 
     if has("gui_running")
-        set gfn=Cascadia\ Code\ NF\ 9
+        set gfn=Cascadia\ Code\ NF\ 10
     endif             
 
 endif
