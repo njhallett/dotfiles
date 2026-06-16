@@ -18,6 +18,9 @@ if grep -qEi "(Microsoft|Microsoft-Standard-WSL2)" /proc/version 2>/dev/null \
     fi
 
     export NNN_OPTS=c
+else
+    unset NNN_OPENER
+    unset NNN_OPTS
 fi
 
 alias n=nnn
