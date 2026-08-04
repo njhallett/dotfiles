@@ -1,3 +1,7 @@
+host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
 # Home
 
 host gw
@@ -576,10 +580,34 @@ host ftp10
     IdentityFile ~/.ssh/FTP10OpusIVScom.pem
     SetEnv TERM=xterm-256color
 
+host sftp11
+    HostName ec2-18-234-99-107.compute-1.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/sftp11.opusivs.com.pem
+    SetEnv TERM=xterm-256color
+
+host sftp12
+    HostName ec2-34-203-205-90.compute-1.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/Paylocity-SFTP.pem
+    SetEnv TERM=xterm-256color
+
+host www.drewtech.com
+    HostName 54.162.67.156
+    User root
+    #IdentityFile ~/.ssh/dt-webserver-key.pem
+    SetEnv TERM=xterm-256color
+
 host smtp01
     HostName ec2-13-43-59-143.eu-west-2.compute.amazonaws.com
     User alpine
     IdentityFile ~/.ssh/smtp01.pem
+    SetEnv TERM=xterm-256color
+
+host casetracker-proxy
+    HostName ec2-18-132-89-196.eu-west-2.compute.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/casetracker-proxy-auth.pem
     SetEnv TERM=xterm-256color
 
 host bastion01
@@ -621,6 +649,11 @@ host bastion04
 host bastion04-deploy
     HostName ec2-34-251-160-156.eu-west-1.compute.amazonaws.com
     User deploy
+
+host bastion05
+    HostName ec2-3-11-168-235.eu-west-2.compute.amazonaws.com
+    User ec2-user
+    IdentityFile ~/.ssh/bastion-IT-Tools.pem
 
 host docker01-al-legacy
     HostName ip-172-32-2-163.eu-west-2.compute.internal
@@ -830,6 +863,19 @@ host docker16-al-webservices-deploy
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion02-deploy
 
+host docker17-al-webservices
+    HostName ip-172-32-3-138.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker17-AL-webservices.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion01
+
+host docker17-al-webservices-deploy
+    HostName ip-172-32-3-138.eu-west-2.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion01-deploy
+
 host docker18-al-portal
     HostName ip-172-35-133-203.eu-west-1.compute.internal
     User ec2-user
@@ -842,6 +888,52 @@ host docker18-al-portal-deploy
     User deploy
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion04-deploy
+
+host docker19-al-webservices
+    HostName ip-172-32-2-151.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker19-AL-webservices.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion01
+
+host docker19-al-webservices-deploy
+    HostName ip-172-32-2-151.eu-west-2.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion01-deploy
+
+host docker20-al-portal
+    HostName ip-172-35-134-201.eu-west-1.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker20-AL-portal.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion04
+
+host docker20-al-portal-deploy
+    HostName ip-172-35-134-201.eu-west-1.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion04-deploy
+
+host docker21-al-portal
+    HostName ip-172-35-144-65.eu-west-1.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker21-AL-portal.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion04
+
+host docker21-al-portal-deploy
+    HostName ip-172-35-144-65.eu-west-1.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion04-deploy
+
+host docker22-it-tools
+    HostName ip-10-0-132-226.eu-west-2.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/docker22-IT-tools.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion05
 
 host portal-oetoolbox-dev
     HostName ip-172-34-141-23.ec2.internal
@@ -868,6 +960,25 @@ host portal-oetoolbox-qa-deploy
     User deploy
     SetEnv TERM=xterm-256color
     ProxyJump ox-jump,bastion03
+
+host portal-oetoolbox-prod
+    HostName ip-172-35-142-226.eu-west-1.compute.internal
+    User ec2-user
+    IdentityFile ~/.ssh/Portal-OE-Toolbox-Prod.pem
+    SetEnv TERM=xterm-256color
+    ProxyJump bastion04
+
+host portal-oetoolbox-prod-deploy
+    HostName ip-172-35-142-226.eu-west-1.compute.internal
+    User deploy
+    SetEnv TERM=xterm-256color
+    ProxyJump ox-jump,bastion04
+
+host netbox
+    HostName ip-10-0-143-142.eu-west-2.compute.internal
+    User admin
+    IdentityFile ~/.ssh/netbox.pem
+    ProxyJump bastion05
 
 # Cloud automation defaults
 
@@ -1031,6 +1142,11 @@ Host dx-nas03
     User admin
     SetEnv TERM=xterm-256color
 
+Host dx-nas04
+    HostName dx-nas04.opusivs.world
+    User admin
+    SetEnv TERM=xterm-256color
+
 Host dx-vcentre
     HostName dx-vcenter01.opusivs.world
     User root
@@ -1079,10 +1195,6 @@ host dx-app24
     HostName dx-app24.opusivs.world
     User debian
 
-Host dx-db01
-    HostName dx-db01.opusivs.world
-    User debian
-
 Host dx-db02
     HostName dx-db02.opusivs.world
     User debian
@@ -1128,3 +1240,12 @@ Host dx-docker07
 Host autoenginuity
     HostName autoenginuity.com
     User t3xx9aiguijb
+
+Host gw7301
+    User admin
+    HostName gw7301.opusivs.net
+
+Host az-vm01
+    User root
+    HostName 10.73.24.140
+
