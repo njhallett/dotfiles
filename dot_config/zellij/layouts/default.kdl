@@ -1,7 +1,7 @@
 layout {
     // Top bar plugin
     pane size=1 borderless=true {
-        plugin location="zellij:tab-bar"
+        plugin location="zellij:compact-bar"
     }
 
     // Main workspace split
@@ -18,10 +18,5 @@ layout {
             close_on_exit true
             focus true
         }
-    }
-
-    // Bottom status bar plugin
-    pane size=2 borderless=true {
-        plugin location="zellij:status-bar"
     }
 }
