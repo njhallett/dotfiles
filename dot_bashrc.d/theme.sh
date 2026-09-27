@@ -1,10 +1,9 @@
 set_theme_day() {
     local mode=${1:-default}
-    local foot_theme star_palette vim_colorscheme z_theme airline_theme vim_perf
+    local star_palette vim_colorscheme z_theme airline_theme vim_perf
 
     case "$mode" in
         "gruvbox")
-            foot_theme="gruvbox-light"
             star_palette="gruvbox_light"
             vim_colorscheme="gruvbox-material"
             airline_theme="gruvbox_material"
@@ -15,7 +14,6 @@ set_theme_day() {
             nnn_theme="4f8c450200af4cbd09c66a946c" # gruvbox-light
             ;;
         *)
-            foot_theme="tokyonight-light"
             star_palette="tokyonight_light"
             vim_colorscheme="catppuccin_latte"
             airline_theme="catppuccin_latte"
@@ -29,16 +27,16 @@ set_theme_day() {
 
     echo "☀️ Setting Day Mode: ${mode^^}"
 
-    # 1. Foot Terminal
-    sed -i "s|^include=.*|include=/usr/share/foot/themes/$foot_theme|" ~/.config/foot/foot.ini
+    # Foot
+    pkill -SIGUSR2 foot
 
-    # 2. Starship
+    # Starship
     sed -i "s|^palette =.*|palette = \"$star_palette\"|" ~/.config/starship.toml
 
-    # 3. Zellij
+    # Zellij
     sed -i "s/^theme .*/theme \"$z_theme\"/" ~/.config/zellij/config.kdl
 
-    # 4. Vim Theme File
+    # Vim Theme File
     cat <<EOF > "$HOME/.config/vim/theme.vim"
 set background=light
 $vim_perf
@@ -46,24 +44,23 @@ colorscheme $vim_colorscheme
 let g:airline_theme='$airline_theme'
 EOF
 
-    # 5. Neomutt
+    # Neomutt
     sed -i "s|^source ~/.config/neomutt/themes/palette/.*|source ~/.config/neomutt/themes/palette/$(printf %q "$neomutt_theme")|" ~/.config/neomutt/neomuttrc
 
-    # 6. bat
+    # bat
     sed -i "s/^--theme=.*/--theme=\"$bat_theme\"/" ~/.config/bat/config
 
-    # 7. nnn
+    # nnn
     sed -i "s/^export NNN_FCOLORS=.*/export NNN_FCOLORS=\"$nnn_theme\"/" ~/.bashrc.d/nnn.sh
     export NNN_FCOLORS="$nnn_theme"
 }
 
 set_theme_night() {
     local mode=${1:-default}
-    local foot_theme star_palette vim_colorscheme z_theme airline_theme vim_extra
+    local star_palette vim_colorscheme z_theme airline_theme vim_extra
 
     case "$mode" in
         "gruvbox")
-            foot_theme="gruvbox-dark"
             star_palette="gruvbox_dark"
             vim_colorscheme="gruvbox-material"
             airline_theme="base16_gruvbox_dark_hard"
@@ -74,7 +71,6 @@ set_theme_night() {
             nnn_theme="3cba272e00d668cc24c6d6b166" # gruvbox-dark
             ;;
         *)
-            foot_theme="nord"
             star_palette="nord"
             vim_colorscheme="nord"
             airline_theme="nord"
@@ -88,16 +84,16 @@ set_theme_night() {
 
     echo "🌙 Setting Night Mode: ${mode^^}"
 
-    # 1. Foot Terminal
-    sed -i "s|^include=.*|include=/usr/share/foot/themes/$foot_theme|" ~/.config/foot/foot.ini
+    # Foot
+    pkill -SIGUSR1 foot
 
-    # 2. Starship
+    # Starship
     sed -i "s|^palette =.*|palette = \"$star_palette\"|" ~/.config/starship.toml
 
-    # 3. Zellij
+    # Zellij
     sed -i "s/^theme .*/theme \"$z_theme\"/" ~/.config/zellij/config.kdl
 
-    # 4. Vim Theme File
+    # Vim Theme File
     cat <<EOF > "$HOME/.config/vim/theme.vim"
 set background=dark
 $(echo -e "$vim_extra")
@@ -105,13 +101,13 @@ colorscheme $vim_colorscheme
 let g:airline_theme='$airline_theme'
 EOF
 
-    # 5. Neomutt
+    # Neomutt
     sed -i "s|^source ~/.config/neomutt/themes/palette/.*|source ~/.config/neomutt/themes/palette/$(printf %q "$neomutt_theme")|" ~/.config/neomutt/neomuttrc
 
-    # 6. bat
+    # bat
     sed -i "s/^--theme=.*/--theme=\"$bat_theme\"/" ~/.config/bat/config
 
-    # 7. nnn
+    # nnn
     sed -i "s/^export NNN_FCOLORS=.*/export NNN_FCOLORS=\"$nnn_theme\"/" ~/.bashrc.d/nnn.sh
     export NNN_FCOLORS="$nnn_theme"
 }
