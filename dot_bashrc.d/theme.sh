@@ -28,6 +28,7 @@ set_theme_day() {
     echo "☀️ Setting Day Mode: ${mode^^}"
 
     # Foot
+    sed -i "s|^initial-color-theme=.*|initial-color-theme=light|" ~/.config/foot/foot.ini
     pkill -SIGUSR2 foot
 
     # Starship
@@ -85,6 +86,7 @@ set_theme_night() {
     echo "🌙 Setting Night Mode: ${mode^^}"
 
     # Foot
+    sed -i "s|^initial-color-theme=.*|initial-color-theme=dark|" ~/.config/foot/foot.ini
     pkill -SIGUSR1 foot
 
     # Starship
